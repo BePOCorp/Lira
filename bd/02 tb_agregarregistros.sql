@@ -1,0 +1,161 @@
+
+-- ----------------------------------------------------------------------------------
+-- Tablas independientes
+-- ----------------------------------------------------------------------------------
+
+-- tb_seccion
+INSERT INTO `bd_cargaacademicalectiva`.`tb_seccion` (`descripcion`) VALUES ('A');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_seccion` (`descripcion`) VALUES ('B');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_seccion` (`descripcion`) VALUES ('C');
+
+-- tb_turno
+INSERT INTO `bd_cargaacademicalectiva`.`tb_turno` (`codigo`, `descripcion`) VALUES ('M', 'Mañana');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_turno` (`codigo`, `descripcion`) VALUES ('T', 'Tarde');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_turno` (`codigo`, `descripcion`) VALUES ('N', 'Noche');
+
+-- tb_tipo
+INSERT INTO `bd_cargaacademicalectiva`.`tb_tipo` (`descripcion`) VALUES ('Impar');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_tipo` (`descripcion`) VALUES ('Par');
+
+
+
+-- tb_tipo_docente
+INSERT INTO `bd_cargaacademicalectiva`.`tb_tipo_docente` (`descripcion`) VALUES ('Nombrado');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_tipo_docente` (`descripcion`) VALUES ('Contratado');
+
+-- tb_tipo_usuario
+INSERT INTO `bd_cargaacademicalectiva`.`tb_tipo_usuario` (`descripcion`) VALUES ('Administrativo');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_tipo_usuario` (`descripcion`) VALUES ('Docente');
+
+
+
+-- tb_dia
+INSERT INTO `bd_cargaacademicalectiva`.`tb_dia` (`descripcion`) VALUES ('Lunes');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_dia` (`descripcion`) VALUES ('Martes');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_dia` (`descripcion`) VALUES ('Miercoles');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_dia` (`descripcion`) VALUES ('Jueves');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_dia` (`descripcion`) VALUES ('Viernes');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_dia` (`descripcion`) VALUES ('Sabado');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_dia` (`descripcion`) VALUES ('Domingo');
+
+
+-- ----------------------------------------------------------------------------------
+-- Tablas dependientes
+-- ----------------------------------------------------------------------------------
+
+-- tb_ciclo
+INSERT INTO `bd_cargaacademicalectiva`.`tb_ciclo` (`descripcion`, `idtb_tipo`) VALUES ('Primer ciclo', '1');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_ciclo` (`descripcion`, `idtb_tipo`) VALUES ('Segundo ciclo', '2');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_ciclo` (`descripcion`, `idtb_tipo`) VALUES ('Tercer ciclo', '1');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_ciclo` (`descripcion`, `idtb_tipo`) VALUES ('Cuarto ciclo', '2');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_ciclo` (`descripcion`, `idtb_tipo`) VALUES ('Quinto ciclo', '1');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_ciclo` (`descripcion`, `idtb_tipo`) VALUES ('Sexto ciclo', '2');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_ciclo` (`descripcion`, `idtb_tipo`) VALUES ('Setimo ciclo', '1');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_ciclo` (`descripcion`, `idtb_tipo`) VALUES ('Octavo ciclo', '2');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_ciclo` (`descripcion`, `idtb_tipo`) VALUES ('Noveno ciclo', '1');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_ciclo` (`descripcion`, `idtb_tipo`) VALUES ('Decimo ciclo', '2');
+
+-- tb_semestre
+INSERT INTO `bd_cargaacademicalectiva`.`tb_semestre` (`descripcion`, `idtb_tipo`) VALUES ('2019-01', '1');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_semestre` (`descripcion`, `idtb_tipo`) VALUES ('2019-02', '2');
+
+
+-- tb_curso
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('2A0125', 'Logica y algoritmos', '3', '1');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('3B0058', 'Algebra lineal', '2', '1');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('5A0060', 'Computacion e informatica basica', '4', '1');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('2C0187', 'Lenguaje y redaccion', '4', '1');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('6C0037', 'Metodologia de la investigacion', '3', '1');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8B0116', 'Introduccion a la ingenieria de sistemas', '2', '1');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('3B0103', 'Matematica basica', '5', '1');
+
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('3A0014', 'Fisica', '4', '2');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('7C0080', 'Economia', '3', '2');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('3B0165', 'Calculo diferencial e integral', '5', '2');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8B0109', 'Algoritmo y estructura de datos', '4', '2');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('7B0192', 'Contabilidad general', '3', '2');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('7A0472', 'Administracion de negocios', '3', '2');
+
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8F0123', 'Electromagnetismo y ondas', '4', '3');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('5B0110', 'Estadistica y probabilidades', '4', '3');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('3B0166', 'Ecuaciones diferenciales', '4', '3');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8E0035', 'Lenguaje de programacion estructurado', '4', '3');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8B0073', 'Teoria de sistemas', '3', '3');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8E0039', 'Programacion lineal', '3', '3');
+
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8F0127', 'Sistemas digitales', '4', '4');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('5B0021', 'Estadistica inferencial', '4', '4');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('3B0170', 'Matematicas discretas', '4', '4');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8E0036', 'Lenguaje de programacion orientado a objetos', '4', '4');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('6C0006', 'Investigacion operativa', '3', '4');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('7B0184', 'Costos y presupuestos', '3', '4');
+
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('5A0063', 'Fundamentos de base de datos', '4', '5');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8E0037', 'Lenguaje de programacion orientado a web', '3', '5');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8E0003', 'Sistemas operativos', '4', '5');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('7B0197', 'Ingenieria de procesos de negocios', '4', '5');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('5A0015', 'Arquitectura del computador', '3', '5');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8B0110', 'Analisis y diseño de sistemas de informacion', '4', '5');
+
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('2H0033', 'Fundamentos de comunicaciones', '4', '6');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('7C0081', 'Ingenieria economica', '3', '6');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8B0068', 'Sistemas de base de datos', '4', '6');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('2A0124', 'Filosofia y etica', '4', '6');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('2D0109', 'Sistemas de gestion del potencial humano', '3', '6');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8B0059', 'Ingenieria de software I', '4', '6');
+
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8B0111', 'Arquitectura y conectividad de redes', '3', '7');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('7A0480', 'Marketing empresarial', '3', '7');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8B0085', 'Dinamica de sistemas', '3', '7');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('7A0013', 'Administracion financiera', '3', '7');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8B0114', 'Ingenieria de Software II', '3', '7');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8B0071', 'Taller de base de datos', '4', '7');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('2I0230', 'Geopolitica y defensa nacional', '3', '7');
+
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8B0108', 'Administracion de redes', '4', '8');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('2I0229', 'Derecho informatico y empresarial', '3', '8');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8B0072', 'Taller de integracion de sistemas', '4', '8');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('7A0482', 'Planeamiento estrategico de negocios', '4', '8');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8B0067', 'Simulacion de sistemas', '3', '8');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8F0126', 'Negocios electronicos', '4', '8');
+
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('GA0062', 'Practicas pre profesionales I', '6', '9');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('7A0477', 'Liderazgo y creatividad empresarial', '3', '9');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('5A0062', 'Formulacion y valuacion de proyectos informaticos', '4', '9');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8B0074', 'Topicos especiales en ingenieria de sistemas I', '3', '9');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8F0124', 'Inteligencia Artificial', '4', '9');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8B0118', 'Seguridad en redes y sistemas de informacion', '3', '9');
+
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('GA0063', 'Practicas pre profesionales II', '6', '10');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('HC0107', 'Seminario de tesis', '2', '10');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('BA0328', 'Gestion del conocimiento', '3', '10');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8B0112', 'Gerencia de proyectos de tecnologia de informacion y comunicaciones', '4', '10');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8B0121', 'Topicos especiales en ingenieria de sistemas II', '4', '10');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_curso` (`codigo`, `descripcion`, `creditos`, `idtb_ciclo`) VALUES ('8B0003', 'Auditoria de sistemas', '4', '10');
+
+
+-- tb_usuario
+INSERT INTO `bd_cargaacademicalectiva`.`tb_usuario` (`nombre`, `apellido`, `usuario`, `clave`, `idtb_tipo_usuario`) VALUES ('Celso', 'Concha del Castillo', 'acelso', '123', '1');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_usuario` (`nombre`, `apellido`, `usuario`, `clave`, `idtb_tipo_usuario`) VALUES ('Edgar Franklin', 'Espinoza Silverio', 'aedgar', '123', '1');
+
+-- tb_docente
+INSERT INTO `bd_cargaacademicalectiva`.`tb_usuario` (`nombre`, `apellido`, `usuario`, `clave`, `idtb_tipo_usuario`) VALUES ('Celso', 'Concha del Castillo', 'dcelso', '123', '2');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_docente` (`codigo`, `documento`, `idtb_tipo_docente`, `idtb_usuario`) VALUES ('2011001', '10203040', '1', '3');
+
+INSERT INTO `bd_cargaacademicalectiva`.`tb_usuario` (`nombre`, `apellido`, `usuario`, `clave`, `idtb_tipo_usuario`) VALUES ('Edgar Franklin', 'Espinoza Silverio', 'dedgar', '123', '2');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_docente` (`codigo`, `documento`, `idtb_tipo_docente`, `idtb_usuario`) VALUES ('2011002', '10203040', '2', '4');
+
+INSERT INTO `bd_cargaacademicalectiva`.`tb_usuario` (`nombre`, `apellido`, `usuario`, `clave`, `idtb_tipo_usuario`) VALUES ('Berta', 'Lopez Juarez', 'dberta', '123', '2');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_docente` (`codigo`, `documento`, `idtb_tipo_docente`, `idtb_usuario`) VALUES ('2011003', '10203040', '1', '5');
+
+INSERT INTO `bd_cargaacademicalectiva`.`tb_usuario` (`nombre`, `apellido`, `usuario`, `clave`, `idtb_tipo_usuario`) VALUES ('Carlos', 'Gallegos Coca', 'dcarlos', '123', '2');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_docente` (`codigo`, `documento`, `idtb_tipo_docente`, `idtb_usuario`) VALUES ('2011004', '10203040', '2', '6');
+
+INSERT INTO `bd_cargaacademicalectiva`.`tb_usuario` (`nombre`, `apellido`, `usuario`, `clave`, `idtb_tipo_usuario`) VALUES ('Jorge', 'Lira Camargo', 'djorge', '123', '2');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_docente` (`codigo`, `documento`, `idtb_tipo_docente`, `idtb_usuario`) VALUES ('2011005', '11223344', '1', '7');
+
+INSERT INTO `bd_cargaacademicalectiva`.`tb_usuario` (`nombre`, `apellido`, `usuario`, `clave`, `idtb_tipo_usuario`) VALUES ('Julio Teofilo', 'Azana Azana', 'djulio', '123', '2');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_docente` (`codigo`, `documento`, `idtb_tipo_docente`, `idtb_usuario`) VALUES ('2011006', '11223344', '2', '8');
+
+
+

@@ -51,17 +51,19 @@
                             <div class="form-group">
                                 <div class="col-md-6">
 
-                                    <label for="">Dia</label>
-                                    <input type="text" class="form-control" id="diaaagregar">
+                                    <label for="">Horas</label>
+                                    <input type="number" class="form-control" name="horasdeactividad" id="horasdeactividad">
                                 </div>
+                                <!--
                                 <div class="col-md-2">
                                     <label for="">&nbsp;</label>
                                     <button id="btn-agregar-dia" type="button" style="border-radius: 8px;" class="btn btn-success btn-flat btn-block"><span class="fa fa-plus"></span> Agregar </button>
                                 </div>
+                                -->
                             </div>
 
 
-
+                            <!--
                             <table id="tbagregarcargas" class="table table-bordered table-striped table-hover">
                                 <thead>
                                     <tr>
@@ -72,6 +74,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                            -->
                                     <!--
                                     <tr>
                                         <td>...</td>
@@ -82,8 +85,10 @@
                                         <td>...</td>
                                     </tr>
                                     -->
+                                    <!--
                                 </tbody>
                             </table>
+                                    -->
 
                             <!--
                             <div class="form-group">

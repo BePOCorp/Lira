@@ -5,7 +5,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Docentes
+            Actividades
             <small>Nuevo</small>
         </h1>
     </section>

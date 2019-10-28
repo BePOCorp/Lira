@@ -38,7 +38,7 @@
                                             <td><?php echo $unaactividad->descripcion; ?></td>
                                             <td>
                                                 <div class="btn-group">
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/actividades/edit/" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
+                                                    <a href="<?php echo base_url(); ?>mantenimiento/actividades/edit/<?php echo $unaactividad->idtb_actividad;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
                                                 </div>
                                             </td>
                                         </tr>

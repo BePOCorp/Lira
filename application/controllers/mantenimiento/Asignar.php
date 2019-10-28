@@ -14,12 +14,12 @@ class Asignar extends CI_Controller {
         $this->load->model("Asignar_model");
     }
     public function index() {
-//        $data = array(
-//            'todaslasactividades' => $this->Carga_model->getCargaTodos(),
-//        );
+        $data = array(
+            'todaslasasignaciones' => $this->Asignar_model->getAsignacionTodos(),
+        );
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');
-        $this->load->view('admin/asignar/list');
+        $this->load->view('admin/asignar/list', $data);
         $this->load->view('layouts/footer');
     }
     public function add() {
@@ -46,13 +46,16 @@ class Asignar extends CI_Controller {
     public function registrar(){
         $idtb_actividad = $this->input->post("id_un_actividad");
         $idtb_docente = $this->input->post("id_un_docente");            
-        $iddias = $this->input->post("arreglo_dias");
+        $horas = $this->input->post("horasdeactividad");
+        /*
         $todas_las_horas_inicio = $this->input->post("arreglo_horas_inicio");
         $todas_las_horas_fin = $this->input->post("arreglo_horas_fin");
-        
+         * 
+         */
         $data = array(
-            'idtb_actividad' => $idtb_actividad,         
+            'idtb_actividad' => $idtb_actividad,
             'idtb_docente' => $idtb_docente,
+            'horas' => $horas,
         );
         if($this->Asignar_model->save($data)){
             $idcarganolectiva = $this->Asignar_model->lastID();

@@ -3,15 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Asignar_model extends CI_Model {
     
-    public function getCargaTodos(){
-        $this->db->select("car.*, sem.descripcion as semestre, CONCAT(usu.nombre, ' ', usu.apellido) as docente, sec.descripcion as seccion, tur.descripcion as turno, cur.descripcion as curso");
-        $this->db->from("tb_carga car");
-        $this->db->join("tb_semestre sem", "car.idtb_semestre = sem.idtb_semestre");
-        $this->db->join("tb_docente doc", "car.idtb_docente = doc.idtb_docente");
+    public function getAsignacionTodos(){
+        $this->db->select("asi.*, CONCAT(usu.nombre, ' ', usu.apellido) as docente, act.descripcion as actividad");
+        $this->db->from("tb_carga_no_lectiva asi");
+        $this->db->join("tb_docente doc", "asi.idtb_docente = doc.idtb_docente");
         $this->db->join("tb_usuario usu", "doc.idtb_usuario = usu.idtb_usuario");
-        $this->db->join("tb_seccion sec", "car.idtb_seccion = sec.idtb_seccion");
-        $this->db->join("tb_turno tur", "car.idtb_turno = tur.idtb_turno");
-        $this->db->join("tb_curso cur", "car.idtb_curso = cur.idtb_curso");
+        $this->db->join("tb_actividad act", "asi.idtb_actividad = act.idtb_actividad");
         $resultados = $this->db->get();
         return $resultados->result();
     }

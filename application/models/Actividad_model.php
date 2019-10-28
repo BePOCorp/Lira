@@ -17,6 +17,7 @@ class Actividad_model extends CI_Model {
     }
     public function update($id,$data){
         $this->db->where("idtb_actividad",$id);
+        //echo "<script>console.log('Debug Objects: " . $id . "' );</script>";
         return $this->db->update("tb_actividad",$data);
     }
 }

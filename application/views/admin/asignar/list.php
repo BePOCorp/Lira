@@ -26,21 +26,20 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
+                                    <th>Docente</th>
                                     <th>Actividad</th>
-                                    <th>Docente</th>                                   
+                                    <th>Horas</th>
                                     <th>Accion</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php if (!empty($todaslascargas)): ?>
-                                    <?php foreach ($todaslascargas as $carga): ?>
+                                <?php if (!empty($todaslasasignaciones)): ?>
+                                    <?php foreach ($todaslasasignaciones as $una_asignacion): ?>
                                         <tr>
-                                            <td><?php echo $carga->idtb_carga; ?></td>
-                                            <td><?php echo $carga->semestre; ?></td>
-                                            <td><?php echo $carga->docente; ?></td>
-                                            <td><?php echo $carga->curso; ?></td>
-                                            <td><?php echo $carga->seccion; ?></td>
-                                            <td><?php echo $carga->turno; ?></td>
+                                            <td><?php echo $una_asignacion->idtb_carga_no_lectiva; ?></td>
+                                            <td><?php echo $una_asignacion->docente; ?></td>
+                                            <td><?php echo $una_asignacion->actividad; ?></td>
+                                            <td><?php echo $una_asignacion->horas; ?></td>
                                             <td>
                                                 <div class="btn-group">
                                                     <!--
@@ -48,10 +47,10 @@
                                                         <span class="fa fa-search"></span>
                                                     </button>
                                                     -->
-                                                    <button type="button" class="btn btn-info btn-view-carga" data-toggle="modal" data-target="#modal-default" value="<?php echo $carga->idtb_carga; ?>">
+                                                    <button type="button" class="btn btn-info btn-view-carga" data-toggle="modal" data-target="#modal-default" value="<?php echo $una_asignacion->idtb_carga_no_lectiva; ?>">
                                                         <span class="fa fa-search"></span>
                                                     </button>
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/cargas/edit/<?php echo $carga->idtb_carga; ?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
+                                                    <a href="<?php echo base_url(); ?>mantenimiento/asignar/edit/<?php echo $una_asignacion->idtb_carga_no_lectiva; ?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
                                                     <!--
                                                     <a href="#" class="btn btn-danger"><span class="fa fa-remove"></span></a>
                                                     -->

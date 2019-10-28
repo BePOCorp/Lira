@@ -47,31 +47,25 @@ class Actividades extends CI_Controller {
 
     public function edit($id) {
         $data = array(
-            'id' => $this->Categorias_model->getPlaza($id),
+            'unaactividad' => $this->Actividad_model->getActividad($id),
         );
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');
-        $this->load->view('admin/categorias/edit', $data);
+        $this->load->view('admin/actividades/edit', $data);
         $this->load->view('layouts/footer');
     }
 
     public function update() {
-        $id = $this->input->post("id");
-        $nombre = $this->input->post("nombre");
-        $apellidos = $this->input->post("apellidos");
+        $actividad = $this->input->post("actividad");
         $descripcion = $this->input->post("descripcion");
-        echo $nombre . " " . $apellidos;
-        $data = array(
-            'nombre' => $nombre,
-            'apellido' => $apellidos,
+        $data_actividad = array(
             'descripcion' => $descripcion,
         );
-
-        if ($this->Categorias_model->update($id, $data)) {
-            redirect(base_url() . "mantenimiento/categorias");
+        if ($this->Actividad_model->update($actividad, $data_actividad)) {
+                redirect(base_url() . "mantenimiento/actividades");
         } else {
             $this->session->set_flashdata("error", "No se pudo actualizar la informacion");
-            redirect(base_url() . "mantenimiento/categorias/edit/" . $id);
+            redirect(base_url() . "mantenimiento/actividades/edit/" . $actividad);
         }
     }
 

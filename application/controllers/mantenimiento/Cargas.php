@@ -95,7 +95,8 @@ class Cargas extends CI_Controller {
         }
     }
 
-    
+    //Aqui me quede
+    /*
     public function view(){
         $idcarga = $this->input->post("idtb_carga");
         $data = array(
@@ -104,4 +105,5 @@ class Cargas extends CI_Controller {
         );
         $this->load->view("admin/cargas/view");
     }
+    */
 }

@@ -95,6 +95,8 @@ class Cargas extends CI_Controller {
         }
     }
 
+    //Falta terminar este metodo
+    
     //Aqui me quede
     /*
     public function view(){

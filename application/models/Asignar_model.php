@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Carga_model extends CI_Model {
+class Asignar_model extends CI_Model {
     
     public function getCargaTodos(){
         $this->db->select("car.*, sem.descripcion as semestre, CONCAT(usu.nombre, ' ', usu.apellido) as docente, sec.descripcion as seccion, tur.descripcion as turno, cur.descripcion as curso");
@@ -32,7 +32,7 @@ class Carga_model extends CI_Model {
         return $resultados->result_array();
     }
     public function save($data){
-        return $this->db->insert("tb_carga", $data);
+        return $this->db->insert("tb_carga_no_lectiva", $data);
     }
     public function lastID(){
         return $this->db->insert_id();

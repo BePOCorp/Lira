@@ -211,6 +211,13 @@
         $("#nombre_un_curso").val(infocurso[1] + " - " +infocurso[2]);
         $("#modal-default-curso").modal("hide");
     });
+    $(document).on("click", ".btn-check-actividad", function(){
+        actividad= $(this).val();
+        infoactividad = actividad.split("*");
+        $("#id_un_actividad").val(infoactividad[0]);
+        $("#nombre_un_actividad").val(infoactividad[1]);
+        $("#modal-default-actividad").modal("hide");
+    });
 
 
     

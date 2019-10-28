@@ -5,7 +5,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Cargas
+            Cargas no Lectiva
             <small>Nuevo</small>
         </h1>
     </section>
@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col-md-12">
 
-                        <form action="<?php echo base_url(); ?>mantenimiento/cargas/registrar" method="POST" class="form-horizontal">                           
+                        <form action="<?php echo base_url(); ?>mantenimiento/asignar/registrar" method="POST" class="form-horizontal">                           
 
                             <div class="form-group">
                                 <div class="col-md-6">
@@ -201,7 +201,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Lista de Asignaciones</h4>
+                <h4 class="modal-title">Lista de Actividades</h4>
             </div>
             <div class="modal-body">
                 <table id="exampleActividad" class="table table-bordered table-striped table-hover">
@@ -220,7 +220,7 @@
                                     <td><?php echo $actividad->descripcion; ?></td>                                                                                                                                            
                                     <?php $dataactividad = $actividad->idtb_actividad . "*" . $actividad->descripcion; ?>
                                     <td>
-                                        <button type="button" class="btn btn-success btn-check btn-check-curso" value="<?php echo $dataactividad; ?>" ><span class="fa fa-check"></span></button>
+                                        <button type="button" class="btn btn-success btn-check btn-check-actividad" value="<?php echo $dataactividad; ?>" ><span class="fa fa-check"></span></button>
                                         
                                     </td>
                                 </tr>

@@ -95,17 +95,14 @@ class Cargas extends CI_Controller {
         }
     }
 
-    //Falta terminar este metodo
     
-    //Aqui me quede
-    /*
     public function view(){
-        $idcarga = $this->input->post("idtb_carga");
-        $data = array(
-            "carga" => ,
-            "horario" => ,
-        );
+//        $idcarga = $this->input->post("idtb_carga");
+//        $data = array(
+//            "carga" => ,
+//            "horario" => ,
+//        );
         $this->load->view("admin/cargas/view");
     }
-    */
+    
 }

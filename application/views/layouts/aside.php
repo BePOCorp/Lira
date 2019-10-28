@@ -26,6 +26,7 @@
                             <li><a href="<?php echo base_url();?>mantenimiento/semestres"><i class="fa fa-circle-o"></i> Semestres</a></li>
                             <li><a href="<?php echo base_url();?>mantenimiento/cargas"><i class="fa fa-circle-o"></i> Cargas</a></li>
                             <li><a href="<?php echo base_url();?>mantenimiento/actividades"><i class="fa fa-circle-o"></i> Actividades</a></li>
+                            <li><a href="<?php echo base_url();?>mantenimiento/asignar"><i class="fa fa-circle-o"></i> Asignar Carga no Lectiva</a></li>
                             <!-- <li><a href="../../index.html"><i class="fa fa-circle-o"></i> Carga</a></li> -->                            
                         </ul>
                     </li>

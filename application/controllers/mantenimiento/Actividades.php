@@ -22,7 +22,7 @@ class Actividades extends CI_Controller {
 
     public function add() {
         $data = array(
-            'actividad' => $this->Actividad_model->getActividadesTodos(),
+            'actividad' => $this->Actividad_model->getActividadTodos(),
         );
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');
@@ -31,24 +31,17 @@ class Actividades extends CI_Controller {
     }
 
     public function registrar() {
-        $plaza = $this->input->post("plaza");
-        $nombre = $this->input->post("nombre");
-        $apellidos = $this->input->post("apellidos");
-        $descripcion = $this->input->post("descripcion");
-
+        $actividad = $this->input->post("actividad");
+        
         $data = array(
-            'id' => $plaza,
-            'nombre' => $nombre,
-            'apellido' => $apellidos,
-            'descripcion' => $descripcion,
-            'estado' => "1"
+            'descripcion' => $actividad,
         );
 
-        if ($this->Categorias_model->save($data)) {
-            redirect(base_url() . "mantenimiento/categorias");
+        if ($this->Actividad_model->save($data)) {
+            redirect(base_url() . "mantenimiento/actividades");
         } else {
             $this->session->set_flashdata("error", "No se pudo guardar la informacion");
-            redirect(base_url() . "mantenimiento/categorias/add");
+            redirect(base_url() . "mantenimiento/actividades/add");
         }
     }
 

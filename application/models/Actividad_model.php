@@ -8,7 +8,7 @@ class Actividad_model extends CI_Model {
         return $resultados->result();
     }
     public function save($data){
-        return $this->db->insert("tb_actividad",$data);
+        return $this->db->insert("tb_actividad", $data);
     }
     public function getActividad($idactividad){
         $this->db->where("idtb_actividad",$idactividad);

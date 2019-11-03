@@ -62,62 +62,7 @@
                                 -->
                             </div>
 
-
-                            <!--
-                            <table id="tbagregarcargas" class="table table-bordered table-striped table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Dia</th>
-                                        <th>Hora Inicio</th>
-                                        <th>Hora Fin</th>
-                                        <th>Opciones</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                            -->
-                                    <!--
-                                    <tr>
-                                        <td>...</td>
-                                        <td>...</td>
-                                        <td>...</td>
-                                        <td>...</td>
-                                        <td>...</td>
-                                        <td>...</td>
-                                    </tr>
-                                    -->
-                                    <!--
-                                </tbody>
-                            </table>
-                                    -->
-
-                            <!--
-                            <div class="form-group">
-                                <div class="col-md-3">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">Subtotal:</span>
-                                        <input type="text" class="form-control" placeholder="Username" name="subtotal" readonly="readonly">
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">IGV:</span>
-                                        <input type="text" class="form-control" placeholder="Username" name="igv" readonly="readonly">
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">Descuento:</span>
-                                        <input type="text" class="form-control" placeholder="Username" name="descuento" value="0.00" readonly="readonly">
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">Total:</span>
-                                        <input type="text" class="form-control" placeholder="Username" name="total" readonly="readonly">
-                                    </div>
-                                </div>
-                            </div>
-                            -->
+                          
 
                             <div class="form-group" style="text-align: center;">
                                 <div class="col-md-12">

@@ -6,7 +6,7 @@ class Cursos extends CI_Controller {
     private $permiso;
     public function __construct() {
         parent::__construct();
-        $this->permiso = $this->backend_lib->control();
+        //(linea para el acceso)$this->permiso = $this->backend_lib->control();
         if(!$this->session->userdata("login")){
             redirect(base_url());
         }

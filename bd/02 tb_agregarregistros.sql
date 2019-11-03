@@ -38,6 +38,19 @@ INSERT INTO `bd_cargaacademicalectiva`.`tb_dia` (`descripcion`) VALUES ('Viernes
 INSERT INTO `bd_cargaacademicalectiva`.`tb_dia` (`descripcion`) VALUES ('Sabado');
 INSERT INTO `bd_cargaacademicalectiva`.`tb_dia` (`descripcion`) VALUES ('Domingo');
 
+-- tb_numero_semana
+INSERT INTO `bd_cargaacademicalectiva`.`tb_numero_semana` (`descripcion`) VALUES ('Primera');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_numero_semana` (`descripcion`) VALUES ('Segunda');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_numero_semana` (`descripcion`) VALUES ('Tercera');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_numero_semana` (`descripcion`) VALUES ('Cuarte');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_numero_semana` (`descripcion`) VALUES ('Quina');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_numero_semana` (`descripcion`) VALUES ('Sexta');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_numero_semana` (`descripcion`) VALUES ('Setima');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_numero_semana` (`descripcion`) VALUES ('Octava');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_numero_semana` (`descripcion`) VALUES ('Novena');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_numero_semana` (`descripcion`) VALUES ('Decima');
+
+
 
 -- ----------------------------------------------------------------------------------
 -- Tablas dependientes

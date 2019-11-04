@@ -38,6 +38,14 @@ INSERT INTO `bd_cargaacademicalectiva`.`tb_dia` (`descripcion`) VALUES ('Viernes
 INSERT INTO `bd_cargaacademicalectiva`.`tb_dia` (`descripcion`) VALUES ('Sabado');
 INSERT INTO `bd_cargaacademicalectiva`.`tb_dia` (`descripcion`) VALUES ('Domingo');
 
+
+-- tb_actividad
+INSERT INTO `bd_cargaacademicalectiva`.`tb_actividad` (`descripcion`) VALUES ('Acreditacion');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_actividad` (`descripcion`) VALUES ('Tutoria');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_actividad` (`descripcion`) VALUES ('Preparacion de clase');
+
+
+
 -- tb_numero_semana
 INSERT INTO `bd_cargaacademicalectiva`.`tb_numero_semana` (`descripcion`) VALUES ('Primera');
 INSERT INTO `bd_cargaacademicalectiva`.`tb_numero_semana` (`descripcion`) VALUES ('Segunda');
@@ -192,4 +200,5 @@ INSERT INTO `bd_cargaacademicalectiva`.`tb_usuario` (`nombre`, `apellido`, `usua
 INSERT INTO `bd_cargaacademicalectiva`.`tb_docente` (`codigo`, `documento`, `idtb_tipo_docente`, `idtb_usuario`) VALUES ('2011006', '11223344', '2', '8');
 
 
-
+-- tb_permisos
+INSERT INTO `bd_cargaacademicalectiva`.`tb_permisos` (`create`, `read`, `update`, `delete`, `idtb_menu`, `idtb_tipo_usuario`) VALUES ('1', '1', '1', '1', '1', '1');

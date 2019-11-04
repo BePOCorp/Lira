@@ -136,7 +136,7 @@
                                 <tr>
                                     <td><?php echo $actividad->idtb_actividad; ?></td>                                   
                                     <td><?php echo $actividad->descripcion; ?></td>                                                                                                                                            
-                                    <?php $dataactividad = $actividad->idtb_actividad . "*" . $actividad->descripcion; ?>
+                                    <?php $dataactividad = $actividad->idtb_carga_no_lectiva . "*" . $actividad->descripcion; ?>
                                     <td>
                                         <button type="button" class="btn btn-success btn-check btn-check-actividad" value="<?php echo $dataactividad; ?>" ><span class="fa fa-check"></span></button>
 

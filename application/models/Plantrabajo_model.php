@@ -34,7 +34,7 @@ class Plantrabajo_model extends CI_Model {
     
     //$this->session->userdata("idtb_tipo_usuario")
     public function getActividadPorDocente(){
-        $this->db->select("act.*");
+        $this->db->select("act.*, cnl.idtb_carga_no_lectiva");
         $this->db->from("tb_actividad act");
         $this->db->join("tb_carga_no_lectiva cnl", "cnl.idtb_actividad = act.idtb_actividad");
         $this->db->join("tb_docente doc", "cnl.idtb_docente = doc.idtb_docente");

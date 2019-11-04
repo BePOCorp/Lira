@@ -61,6 +61,18 @@ INSERT INTO `bd_cargaacademicalectiva`.`tb_numero_semana` (`descripcion`) VALUES
 INSERT INTO `bd_cargaacademicalectiva`.`tb_numero_semana` (`descripcion`) VALUES ('Vigesimo');
 
 
+-- tb_menu
+INSERT INTO `bd_cargaacademicalectiva`.`tb_menu` (`nombre`, `url`) VALUES ('Inicio', 'dashboard');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_menu` (`nombre`, `url`) VALUES ('Docentes', 'mantenimiento/docentes');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_menu` (`nombre`, `url`) VALUES ('Cursos', 'mantenimiento/cursos');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_menu` (`nombre`, `url`) VALUES ('Semestres', 'mantenimiento/semestres');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_menu` (`nombre`, `url`) VALUES ('CargasLectivas', 'mantenimiento/cargas');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_menu` (`nombre`, `url`) VALUES ('Actividades', 'mantenimiento/actividades');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_menu` (`nombre`, `url`) VALUES ('CargaNoLectiva', 'mantenimiento/asignar');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_menu` (`nombre`, `url`) VALUES ('PlanDeTrabajo', 'mantenimiento/plantrabajo');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_menu` (`nombre`, `url`) VALUES ('Seguimiento', 'mantenimiento/seguimiento');
+
+
 -- ----------------------------------------------------------------------------------
 -- Tablas dependientes
 -- ----------------------------------------------------------------------------------

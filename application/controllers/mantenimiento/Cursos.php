@@ -3,13 +3,13 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Cursos extends CI_Controller {
-    private $permiso;
+    private $permisos;
     public function __construct() {
         parent::__construct();
-        //(linea para el acceso)$this->permiso = $this->backend_lib->control();
         if(!$this->session->userdata("login")){
             redirect(base_url());
         }
+        $this->permiso = $this->backend_lib->control();
         $this->load->model("Curso_model");
         $this->load->model("Ciclo_model");
     }

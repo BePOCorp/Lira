@@ -31,7 +31,15 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                
+                                <?php if (!empty($todoslosplan)): ?>
+                                    <?php foreach ($todoslosplan as $plan): ?>
+                                <tr>
+                                    <td><?php echo $plan->semana; ?></td>
+                                    <td><?php echo $plan->actividad; ?></td>
+                                    <td><?php echo $plan->plantrabajo; ?></td>
+                                </tr>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
                             </tbody>
                         </table>
                     </div>

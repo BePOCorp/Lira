@@ -226,7 +226,7 @@
             infosemana = data.split("*");
             html = "<tr>";
             html += "<td><input type='hidden' name='semanas[]' value='" + infosemana[0] + "'>" + infosemana[1] + "</td>";
-            html += "<td><input type='text' name='plantrabajo' id='plantrabajo' value=''></td>";
+            html += "<td><input type='text' name='plantrabajo[]' value=''></td>";
             /*
              html += "<td><input type='text' name='dias' value='1'></td>";
              */

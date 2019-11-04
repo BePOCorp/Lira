@@ -4,6 +4,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Plantrabajo_model extends CI_Model {
 
+    public function getPlantrabajo(){
+        $this->db->select("pt.descripcion plantrabajo, sem.descripcion semana, a.descripcion actividad");
+        $this->db->from("tb_plan_de_trabajo as pt");
+        $this->db->join("tb_numero_semana sem", "pt.idtb_numero_semana = sem.idtb_numero_semana");
+        $this->db->join("tb_carga_no_lectiva cnl", "pt.idtb_carga_no_lectiva = cnl.idtb_carga_no_lectiva");
+        $this->db->join("tb_actividad a","cnl.idtb_actividad=a.idtb_actividad");
+        $resultados = $this->db->get();
+        return $resultados->result();
+    }
+    
     public function getSemana($semana) {
         $this->db->select("idtb_numero_semana, descripcion as label");
         $this->db->from("tb_numero_semana");

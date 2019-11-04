@@ -214,6 +214,33 @@
     $(document).on("click", ".btn-remove-dia", function () {
         $(this).closest("tr").remove();
     });
+    
+    
+    
+    
+    
+    
+    $("#btn-agregar-semana").on("click", function () {
+        data = $(this).val();
+        if (data !== '') {
+            infosemana = data.split("*");
+            html = "<tr>";
+            html += "<td><input type='hidden' name='semanas[]' value='" + infosemana[0] + "'>" + infosemana[1] + "</td>";
+            html += "<td><input type='text' name='plantrabajo' id='plantrabajo' value=''></td>";
+            /*
+             html += "<td><input type='text' name='dias' value='1'></td>";
+             */
+            html += "<td><button type='button' class='btn btn-danger btn-remove-dia'><span class='fa fa-remove'></span></button></td>";
+            html += "</tr>";
+
+            $("#tbagregarplan tbody").append(html);
+        } else {
+            alert("Seleccione la semana");
+        }
+    });
+    $(document).on("click", ".btn-remove-dia", function () {
+        $(this).closest("tr").remove();
+    });
 
 
 

@@ -25,7 +25,7 @@ class Plantrabajo extends CI_Controller {
     
     public function add() {
         $data = array(           
-            'todaslasactividades' => $this->Actividad_model->getActividadTodos(),
+            'todaslasactividades' => $this->Plantrabajo_model->getActividadPorDocente(),
         );
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');
@@ -39,8 +39,21 @@ class Plantrabajo extends CI_Controller {
         echo json_encode($semana);
     }
     
-//    public function registrar(){
-//        $ = 
-//    }
+    public function registrar(){ 
+        $semana = $this->input->post("semana");
+        $id = $this->input->post("id_un_actividad");
+        $descripcion = $this->input->post("plantrabajo"); 
+        $data= array(
+            'descripcion' => $descripcion,
+            'idtb_carga_no_lectiva' => $id,//$this->Plantrabajo_model->getID($id),
+            'idtb_numero_semana' => $semana,//$this->Plantrabajo_model->getIDSemana($semana),
+            'cumplimiento' => '1',
+        );
+        if($this->Plantrabajo_model->save($data)){
+            redirect(base_url()."mantenimiento/plantrabajo");
+        }else{
+            redirect(base_url()."mantenimiento/plantrabajo/add");
+        }
+    }
 
 }

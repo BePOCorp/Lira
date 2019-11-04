@@ -47,11 +47,6 @@ class Asignar extends CI_Controller {
         $idtb_actividad = $this->input->post("id_un_actividad");
         $idtb_docente = $this->input->post("id_un_docente");            
         $horas = $this->input->post("horasdeactividad");
-        /*
-        $todas_las_horas_inicio = $this->input->post("arreglo_horas_inicio");
-        $todas_las_horas_fin = $this->input->post("arreglo_horas_fin");
-         * 
-         */
         $data = array(
             'idtb_actividad' => $idtb_actividad,
             'idtb_docente' => $idtb_docente,

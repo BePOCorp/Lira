@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col-md-12">
 
-                        <form action="<?php echo base_url(); ?>mantenimiento/cargas/registrar" method="POST" class="form-horizontal">
+                        <form action="<?php echo base_url(); ?>mantenimiento/plantrabajo/registrar" method="POST" class="form-horizontal">
 
                             <!--                            <div class="form-group">
                             
@@ -59,10 +59,7 @@
                                     <label for="">Semana</label>
                                     <input type="text" class="form-control" id="agregarsemana">
                                 </div>
-                                <div class="col-md-7">
-                                    <label for="">Plan de Trabajo</label>
-                                    <textarea name="textarea" id="textarea" autofocus minlength="20" rows="5" cols="75" placeholder="Introducir el Plan de Trabajo" required></textarea>
-                                </div>
+                                
                                 <div class="col-md-2">
                                     <label for="">&nbsp;</label>
                                     <button id="btn-agregar-semana" type="button" class="btn btn-success btn-flat btn-block"><span class="fa fa-plus"></span> Agregar</button>
@@ -74,12 +71,12 @@
                             
                             
                             
-                            <table id="tbagregarcargas" class="table table-bordered table-striped table-hover">
+                            <table id="tbagregarplan" class="table table-bordered table-striped table-hover">
                                 <thead>
                                     <tr>
                                         <th>Semana</th>
                                         <th>Plan de trabajo</th>
-
+                                        <th>Accion</th>
                                     </tr>
                                 </thead>
                                 <tbody>

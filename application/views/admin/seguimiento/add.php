@@ -32,26 +32,16 @@
                                 <div class="col-md-6">
                                     <label for="seccion"> Plan de Trabajo </label>
                                     <div class="input-group">
-                                        <input type="hidden" name="id_un_docente" id="id_un_docente">
-                                        <input type="text" class="form-control" disabled="disabled" id="nombre_un_docente">
+                                        <input type="hidden" name="id_un_plan" id="id_un_plan">
+                                        <input type="text" class="form-control" disabled="disabled" id="nombre_un_plan">
                                         <span class="input-group-btn">
-                                            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal-default" ><span class="fa fa-search"></span> Buscar</button>
+                                            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal-default-plantrabajo" ><span class="fa fa-search"></span> Buscar</button>
                                         </span>
                                     </div><!-- /input-group -->
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label for="">Semana</label>
-                                    <input type="text" class="form-control" id="semana">
-                                </div>
-                                <div class="col-md-2">
-                                    <label for="">&nbsp;</label>
-                                    <button id="btn-agregar-semana" type="button" class="btn btn-success btn-flat btn-block"><span class="fa fa-plus"></span> Agregar </button>
-                                </div>
-                            </div>
+                            </div>                     
 
-                            <div clas=""form-group style="text-align: left;">
+                            <div clas=""form-group style="text-align: center;">
                                 <label for="reporte"> Reporte Semanal </label>
                                 <div class="col-md-12">
                                     <textarea name="textarea" id="textarea" autofocus minlength="20" rows="10" cols="75" placeholder="Introducir el reporte semanal" required></textarea>
@@ -76,7 +66,7 @@
 </div>
 <!-- /.content-wrapper -->
 
-<div class="modal fade" id="modal-default-actividades">
+<div class="modal fade" id="modal-default-actividad">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -94,7 +84,66 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
+                        <?php if (!empty($todaslasactividades)): ?>
+                            <?php foreach ($todaslasactividades as $actividad): ?>
+                                <tr>
+                                    <td><?php echo $actividad->idtb_actividad; ?></td>                                   
+                                    <td><?php echo $actividad->descripcion; ?></td>                                                                                                                                            
+                                    <?php $dataactividad = $actividad->idtb_carga_no_lectiva . "*" . $actividad->descripcion; ?>
+                                    <td>
+                                        <button type="button" class="btn btn-success btn-check btn-check-actividad" value="<?php echo $dataactividad; ?>" ><span class="fa fa-check"></span></button>
+
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+
+<div class="modal fade" id="modal-default-plantrabajo">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Plan de Trabajo</h4>
+            </div>
+            <div class="modal-body">
+                <table id="examplePlantrabajo" class="table table-bordered table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Semana</th>                           
+                            <th>Descripcion</th>                           
+                            <th>Opcion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php if (!empty($todoslosplanes)): ?>
+                            <?php foreach ($todoslosplanes as $plan): ?>
+                                <tr>
+                                    <td><?php echo $plan->idtb_plantrabajo; ?></td> 
+                                    <td><?php echo $plan->semana; ?></td>                                   
+                                    <td><?php echo $plan->plan_trabajo; ?></td>                                                                                                                                            
+                                    <?php $dataplan = $plan->idtb_plantrabajo . "*" . $plan->semana . "*" . $plan->plan_trabajo; ?>
+                                    <td>
+                                        <button type="button" class="btn btn-success btn-check btn-check-plan" value="<?php echo $dataplan; ?>" ><span class="fa fa-check"></span></button>
+
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
                     </tbody>
                 </table>
             </div>

@@ -42,18 +42,18 @@
                                             <td><?php echo $una_asignacion->horas; ?></td>
                                             <td>
                                                 <div class="btn-group">
-                                                    <!--
-                                                    <button type="button" class="btn btn-info btn-view" data-toggle="modal" data-target="#modal-default" value="<?php echo $carga->idtb_carga; ?>">
+                                                    
+<!--                                                    <button type="button" class="btn btn-info btn-view" data-toggle="modal" data-target="#modal-default" value="<?php echo $carga->idtb_carga; ?>">
                                                         <span class="fa fa-search"></span>
-                                                    </button>
-                                                    -->
+                                                    </button>-->
+                                                    
                                                     <button type="button" class="btn btn-info btn-view-carga" data-toggle="modal" data-target="#modal-default" value="<?php echo $una_asignacion->idtb_carga_no_lectiva; ?>">
                                                         <span class="fa fa-search"></span>
                                                     </button>
                                                     <a href="<?php echo base_url(); ?>mantenimiento/asignar/edit/<?php echo $una_asignacion->idtb_carga_no_lectiva; ?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
-                                                    <!--
-                                                    <a href="#" class="btn btn-danger"><span class="fa fa-remove"></span></a>
-                                                    -->
+                                                    
+<!--                                                    <a href="#" class="btn btn-danger"><span class="fa fa-remove"></span></a>-->
+                                                    
                                                 </div>
                                             </td>
                                         </tr>

@@ -9,7 +9,7 @@ class Cursos extends CI_Controller {
         if(!$this->session->userdata("login")){
             redirect(base_url());
         }
-        $this->permiso = $this->backend_lib->control();
+        //$this->permiso = $this->backend_lib->control();
         $this->load->model("Curso_model");
         $this->load->model("Ciclo_model");
     }

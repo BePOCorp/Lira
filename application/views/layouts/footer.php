@@ -268,12 +268,12 @@
         $("#nombre_un_actividad").val(infoactividad[1]);
         $("#modal-default-actividad").modal("hide");
     });
-    $(document).on("click", ".btn-check-actividades", function () {
-        actividad = $(this).val();
-        infoactividad = actividad.split("*");
-        $("#id_un_actividad").val(infoactividad[0]);
-        $("#nombre_un_actividad").val(infoactividad[1]);
-        $("#modal-default-actividad").modal("hide");
+    $(document).on("click", ".btn-check-plan", function () {
+        plantrabajo = $(this).val();
+        infoplan = plantrabajo.split("*");
+        $("#id_un_plan").val(infoplan[0]);
+        $("#nombre_un_plan").val(infoplan[1]+ " - " +infoplan[2]);
+        $("#modal-default-plantrabajo").modal("hide");
     });
 
 

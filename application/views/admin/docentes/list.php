@@ -48,15 +48,15 @@
                                             <td><?php echo $docentes->tipodocente; ?></td>
                                             <td>
                                                 <div class="btn-group">
-                                                    <!--
-                                                    <button type="button" class="btn btn-info btn-view" data-toggle="modal" data-target="#modal-default" value="<?php echo $docentes->idtb_docente;?>">
+                                                    
+<!--                                                    <button type="button" class="btn btn-info btn-view" data-toggle="modal" data-target="#modal-default" value="<?php echo $docentes->idtb_docente;?>">
                                                         <span class="fa fa-search"></span>
-                                                    </button>
-                                                    -->
+                                                    </button>-->
+                                                    
                                                     <a href="<?php echo base_url(); ?>mantenimiento/docentes/edit/<?php echo $docentes->idtb_docente;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
-                                                    <!--
-                                                    <a href="#" class="btn btn-danger"><span class="fa fa-remove"></span></a>
-                                                    -->
+                                                    
+<!--                                                    <a href="#" class="btn btn-danger"><span class="fa fa-remove"></span></a>-->
+                                                    
                                                 </div>
                                             </td>
                                         </tr>

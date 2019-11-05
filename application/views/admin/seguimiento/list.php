@@ -29,31 +29,33 @@
                                     <th>Actividad</th>
                                     <th>Plan de Trabajo</th>
                                     <th>Reporte</th> 
+                                    
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php if (!empty("")): ?>
-                                    
+                                <?php if (!empty($todoslosreportes)): ?>
+                                    <?php foreach ($todoslosreportes as $reporte) ?>
                                         <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>                                          
-                                            <td>
+                                            <td><?php echo$reporte->semana ?></td>
+                                            <td><?php echo$reporte->actividad ?></td>
+                                            <td><?php echo$reporte->plantrabajo ?></td> 
+                                            <td><?php echo$reporte->reporte ?></td>
+<!--                                            <td>
                                                 <div class="btn-group">
-                                                    <!--
+                                                    
                                                     <button type="button" class="btn btn-info btn-view" data-toggle="modal" data-target="#modal-default" value="<?php echo $carga->idtb_carga;?>">
                                                         <span class="fa fa-search"></span>
                                                     </button>
-                                                    -->
+                                                    
                                                     <button type="button" class="btn btn-info btn-view-carga" data-toggle="modal" data-target="#modal-default" value="<?php echo $carga->idtb_carga;?>">
                                                         <span class="fa fa-search"></span>
                                                     </button>
                                                     <a href="<?php echo base_url(); ?>mantenimiento/cargas/edit/<?php echo $carga->idtb_carga;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
-                                                    <!--
+                                                    
                                                     <a href="#" class="btn btn-danger"><span class="fa fa-remove"></span></a>
-                                                    -->
+                                                    
                                                 </div>
-                                            </td>
+                                            </td>-->
                                         </tr>
                                     
                                 <?php endif; ?>

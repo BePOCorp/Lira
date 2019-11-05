@@ -24,7 +24,7 @@
                     <li><a href="<?php echo base_url(); ?>mantenimiento/cursos"><i class="fa fa-circle-o"></i> Cursos</a></li>
                     <li><a href="<?php echo base_url(); ?>mantenimiento/semestres"><i class="fa fa-circle-o"></i> Semestres</a></li>
                     <li><a href="<?php echo base_url(); ?>mantenimiento/cargas"><i class="fa fa-circle-o"></i> Cargas</a></li>
-                            <!-- <li><a href="../../index.html"><i class="fa fa-circle-o"></i> Carga</a></li> -->                            
+                    <li><a href="<?php echo base_url(); ?>mantenimiento/cargalectivapordocente"><i class="fa fa-circle-o"></i> Mi carga lectiva</a></li>
                 </ul>
             </li>
             <li class="treeview">

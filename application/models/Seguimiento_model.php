@@ -29,6 +29,9 @@ class Seguimiento_model extends CI_Model {
         $this->db->join("tb_numero_semana sem", "pt.idtb_numero_semana=sem.idtb_numero_semana");
         $this->db->join("tb_carga_no_lectiva cnl", "pt.idtb_carga_no_lectiva=cnl.idtb_carga_no_lectiva");
         $this->db->join("tb_actividad a", "cnl.idtb_actividad=a.idtb_actividad");
+        $this->db->join("tb_docente d","cnl.idtb_docente=d.idtb_docente");
+        $this->db->join("tb_usuario u","d.idtb_usuario=d.idtb_usuario");
+        $this->db->where("u.idtb_usuario", $this->session->userdata("idtb_usuario"));
         $resultados = $this->db->get();
         return $resultados->result();
     }

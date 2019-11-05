@@ -202,3 +202,49 @@ INSERT INTO `bd_cargaacademicalectiva`.`tb_docente` (`codigo`, `documento`, `idt
 
 -- tb_permisos
 INSERT INTO `bd_cargaacademicalectiva`.`tb_permisos` (`create`, `read`, `update`, `delete`, `idtb_menu`, `idtb_tipo_usuario`) VALUES ('1', '1', '1', '1', '1', '1');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_permisos` (`create`, `read`, `update`, `delete`, `idtb_menu`, `idtb_tipo_usuario`) VALUES ('1', '1', '1', '1', '2', '1');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_permisos` (`create`, `read`, `update`, `delete`, `idtb_menu`, `idtb_tipo_usuario`) VALUES ('1', '1', '1', '1', '3', '1');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_permisos` (`create`, `read`, `update`, `delete`, `idtb_menu`, `idtb_tipo_usuario`) VALUES ('1', '1', '1', '1', '4', '1');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_permisos` (`create`, `read`, `update`, `delete`, `idtb_menu`, `idtb_tipo_usuario`) VALUES ('1', '1', '1', '1', '5', '1');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_permisos` (`create`, `read`, `update`, `delete`, `idtb_menu`, `idtb_tipo_usuario`) VALUES ('1', '1', '1', '1', '6', '1');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_permisos` (`create`, `read`, `update`, `delete`, `idtb_menu`, `idtb_tipo_usuario`) VALUES ('1', '1', '1', '1', '7', '1');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_permisos` (`create`, `read`, `update`, `delete`, `idtb_menu`, `idtb_tipo_usuario`) VALUES ('1', '1', '1', '1', '8', '1');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_permisos` (`create`, `read`, `update`, `delete`, `idtb_menu`, `idtb_tipo_usuario`) VALUES ('1', '1', '1', '1', '9', '1');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_permisos` (`create`, `read`, `update`, `delete`, `idtb_menu`, `idtb_tipo_usuario`) VALUES ('1', '1', '1', '1', '1', '2');
+-- INSERT INTO `bd_cargaacademicalectiva`.`tb_permisos` (`create`, `read`, `update`, `delete`, `idtb_menu`, `idtb_tipo_usuario`) VALUES ('1', '1', '1', '1', '2', '2');
+-- INSERT INTO `bd_cargaacademicalectiva`.`tb_permisos` (`create`, `read`, `update`, `delete`, `idtb_menu`, `idtb_tipo_usuario`) VALUES ('1', '1', '1', '1', '3', '2');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_permisos` (`create`, `read`, `update`, `delete`, `idtb_menu`, `idtb_tipo_usuario`) VALUES ('1', '1', '1', '1', '4', '2');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_permisos` (`create`, `read`, `update`, `delete`, `idtb_menu`, `idtb_tipo_usuario`) VALUES ('1', '1', '1', '1', '5', '2');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_permisos` (`create`, `read`, `update`, `delete`, `idtb_menu`, `idtb_tipo_usuario`) VALUES ('1', '1', '1', '1', '6', '2');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_permisos` (`create`, `read`, `update`, `delete`, `idtb_menu`, `idtb_tipo_usuario`) VALUES ('1', '1', '1', '1', '7', '2');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_permisos` (`create`, `read`, `update`, `delete`, `idtb_menu`, `idtb_tipo_usuario`) VALUES ('1', '1', '1', '1', '8', '2');
+INSERT INTO `bd_cargaacademicalectiva`.`tb_permisos` (`create`, `read`, `update`, `delete`, `idtb_menu`, `idtb_tipo_usuario`) VALUES ('1', '1', '1', '1', '9', '2');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

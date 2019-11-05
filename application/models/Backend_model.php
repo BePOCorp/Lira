@@ -9,9 +9,9 @@ class Backend_model extends CI_Model {
     }
     
     public function getPermisos($menu, $rol){
-        $this->db->where("menu_id", $menu);
-        $this->db->where("rol_id", $rol);
-        $resultado = $this->db->get("permisos");
+        $this->db->where("idtb_menu", $menu);
+        $this->db->where("idtb_tipo_usuario", $rol);
+        $resultado = $this->db->get("tb_permisos");
         return $resultado->row();
     }
 }

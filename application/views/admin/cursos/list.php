@@ -31,6 +31,7 @@
                                     <th>Codigo</th>
                                     <th>Descripcion</th>
                                     <th>Creditos</th>
+                                    <th>Horas</th>
                                     <th>N° ciclo</th>
                                     <th>Ciclo</th>
                                 </tr>
@@ -43,6 +44,7 @@
                                             <td><?php echo $uncurso->codigo; ?></td>
                                             <td><?php echo $uncurso->descripcion; ?></td>
                                             <td><?php echo $uncurso->creditos; ?></td>
+                                            <td><?php echo $uncurso->horas; ?></td>
                                             <td><?php echo $uncurso->idtb_ciclo; ?></td>
                                             <td><?php echo $uncurso->ciclo; ?></td>
                                         </tr>

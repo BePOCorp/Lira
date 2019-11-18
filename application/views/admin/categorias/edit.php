@@ -22,7 +22,7 @@
                             
                         </div>
                         <?php endif;?>
-                        <form action="<?php echo base_url(); ?>mantenimiento/categorias/update" method="POST">
+                        <form action="<?php echo base_url(); ?>controller/categorias/update" method="POST">
                             
                             <div class="form-group col-md-6">
                                 <label for="plaza">Plaza</label>

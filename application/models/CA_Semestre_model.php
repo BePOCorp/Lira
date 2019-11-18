@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Semestre_model extends CI_Model {
+class CA_Semestre_model extends CI_Model {
     
     public function getSemestreTodos(){
         $this->db->select("se.*, ti.descripcion as tipo");

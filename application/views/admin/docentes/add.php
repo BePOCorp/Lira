@@ -22,7 +22,7 @@
                                 <p><i class="icon fa fa-ban"></i><?php echo $this->session->flashdata("error") ?></p>
                             </div>
                         <?php endif; ?>
-                        <form action="<?php echo base_url(); ?>mantenimiento/docentes/registrar" method="POST">
+                        <form action="<?php echo base_url(); ?>controller/docentes/registrar" method="POST">
                             <div class="form-group col-md-6">
                                 <label for="codigo">Codigo</label>
                                 <input type="text" class="form-control" autofocus id="codigo" name="codigo" maxlength="45" placeholder="Ingrese codigo" required>

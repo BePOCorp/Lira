@@ -22,7 +22,7 @@
                                 <p><i class="icon fa fa-ban"></i><?php echo $this->session->flashdata("error") ?></p>
                             </div>
                         <?php endif; ?>
-                        <form action="<?php echo base_url(); ?>mantenimiento/semestres/registrar" method="POST">
+                        <form action="<?php echo base_url(); ?>controller/semestres/registrar" method="POST">
                             <div class="form-group col-md-6">
                                 <label for="descripcion">Descripcion</label>
                                 <input type="text" class="form-control" autofocus id="descripcion" name="descripcion" maxlength="45" placeholder="Ingrese descripcion" required>

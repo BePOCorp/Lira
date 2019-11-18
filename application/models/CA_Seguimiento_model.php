@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Seguimiento_model extends CI_Model {
+class CA_Seguimiento_model extends CI_Model {
 
     public function getPlantrabajoPorActividad($idusuario){
         $this->db->select("pt.idtb_plan_de_trabajo idtb_plantrabajo, pt.descripcion plan_trabajo, sem.descripcion semana");

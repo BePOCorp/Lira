@@ -16,7 +16,7 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="<?php echo base_url(); ?>mantenimiento/actividades/add" class="btn btn-primary btn-flat"><span class="fa fa-plus"></span> Agregar Actividad </a>
+                        <a href="<?php echo base_url(); ?>controller/actividades/add" class="btn btn-primary btn-flat"><span class="fa fa-plus"></span> Agregar Actividad </a>
                     </div>
                 </div>
                 <hr>
@@ -38,7 +38,7 @@
                                             <td><?php echo $unaactividad->descripcion; ?></td>
                                             <td>
                                                 <div class="btn-group">
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/actividades/edit/<?php echo $unaactividad->idtb_actividad;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
+                                                    <a href="<?php echo base_url(); ?>controller/actividades/edit/<?php echo $unaactividad->idtb_actividad;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
                                                 </div>
                                             </td>
                                         </tr>

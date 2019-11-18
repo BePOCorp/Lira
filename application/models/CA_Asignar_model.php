@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Asignar_model extends CI_Model {
+class CA_Asignar_model extends CI_Model {
     
     public function getAsignacionTodos(){
         $this->db->select("asi.*, CONCAT(usu.nombre, ' ', usu.apellido) as docente, act.descripcion as actividad");

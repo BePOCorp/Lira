@@ -8,11 +8,11 @@ class Categorias extends CI_Controller {
         if(!$this->session->userdata("login")){
             redirect(base_url());
         }
-        $this->load->model("Categoria_model");
+        $this->load->model("CA_Categoria_model");
     }
     public function index() {
         $data = array(
-            'categorias' => $this->Categoria_model->getCategoriasTodos(),
+            'categorias' => $this->CA_Categoria_model->getCategoriasTodos(),
         );
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');
@@ -23,7 +23,7 @@ class Categorias extends CI_Controller {
 
     public function add() {
         $data = array(
-            'categorias' => $this->Categoria_model->getCategoriasTodos(),
+            'categorias' => $this->CA_Categoria_model->getCategoriasTodos(),
         );
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');
@@ -46,10 +46,10 @@ class Categorias extends CI_Controller {
         );
 
         if ($this->Categorias_model->save($data)) {
-            redirect(base_url() . "mantenimiento/categorias");
+            redirect(base_url() . "controller/categorias");
         } else {
             $this->session->set_flashdata("error", "No se pudo guardar la informacion");
-            redirect(base_url() . "mantenimiento/categorias/add");
+            redirect(base_url() . "controller/categorias/add");
         }
     }
 
@@ -76,10 +76,10 @@ class Categorias extends CI_Controller {
         );
 
         if ($this->Categorias_model->update($id, $data)) {
-            redirect(base_url() . "mantenimiento/categorias");
+            redirect(base_url() . "controller/categorias");
         } else {
             $this->session->set_flashdata("error", "No se pudo actualizar la informacion");
-            redirect(base_url() . "mantenimiento/categorias/edit/" . $id);
+            redirect(base_url() . "controller/categorias/edit/" . $id);
         }
     }
 

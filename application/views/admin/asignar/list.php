@@ -16,7 +16,7 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="<?php echo base_url(); ?>mantenimiento/asignar/add" class="btn btn-primary btn-flat"><span class="fa fa-plus"></span> Asignar Carga no Lectiva </a>
+                        <a href="<?php echo base_url(); ?>controller/asignar/add" class="btn btn-primary btn-flat"><span class="fa fa-plus"></span> Asignar Carga no Lectiva </a>
                     </div>
                 </div>
                 <hr>
@@ -51,7 +51,7 @@
                                                         <span class="fa fa-search"></span>
                                                     </button>
                                                     -->
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/asignar/edit/<?php echo $una_asignacion->idtb_carga_no_lectiva; ?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
+                                                    <a href="<?php echo base_url(); ?>controller/asignar/edit/<?php echo $una_asignacion->idtb_carga_no_lectiva; ?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
                                                     
 <!--                                                    <a href="#" class="btn btn-danger"><span class="fa fa-remove"></span></a>-->
                                                     

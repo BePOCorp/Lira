@@ -22,7 +22,7 @@
                                 <p><i class="icon fa fa-ban"></i><?php echo $this->session->flashdata("error")?></p>
                             </div>
                         <?php endif;?>
-                        <form action="<?php echo base_url(); ?>mantenimiento/semestres/update" method="POST">
+                        <form action="<?php echo base_url(); ?>controller/semestres/update" method="POST">
                             <!--
                             <div class="form-group col-md-6">
                                 <label for="docente">Id docente</label> -->

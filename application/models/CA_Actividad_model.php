@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Actividad_model extends CI_Model {
+class CA_Actividad_model extends CI_Model {
     
     public function getActividadTodos(){
         $resultados = $this->db->get("tb_actividad");

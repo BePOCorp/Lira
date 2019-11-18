@@ -8,18 +8,18 @@ class Cargas extends CI_Controller {
         if(!$this->session->userdata("login")){
             redirect(base_url());
         }
-        $this->load->model("Carga_model");
-        $this->load->model("Docente_model");
-        $this->load->model("Curso_model");
-        $this->load->model("Semestre_model");
-        $this->load->model("Ciclo_model");
-        $this->load->model("Dia_model");
-        $this->load->model("Seccion_model");
-        $this->load->model("Turno_model");
+        $this->load->model("CA_Carga_model");
+        $this->load->model("CA_Docente_model");
+        $this->load->model("CA_Curso_model");
+        $this->load->model("CA_Semestre_model");
+        $this->load->model("CA_Ciclo_model");
+        $this->load->model("CA_Dia_model");
+        $this->load->model("CA_Seccion_model");
+        $this->load->model("CA_Turno_model");
     }
     public function index() {
         $data = array(
-            'todaslascargas' => $this->Carga_model->getCargaTodos(),
+            'todaslascargas' => $this->CA_Carga_model->getCargaTodos(),
         );
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');
@@ -28,13 +28,13 @@ class Cargas extends CI_Controller {
     }
     public function add() {
         $data = array(
-            'todoslosdocentes' => $this->Docente_model->getDocenteTodos(),
-            'todoslossemestres' => $this->Semestre_model->getSemestreTodos(),
-            'todoslosciclos' => $this->Ciclo_model->getCicloTodos(),
-            'todosloscursos' => $this->Curso_model->getCursoTodos(),
-            'todoslosdias' => $this->Dia_model->getDiaTodos(),
-            'todoslosturnos' => $this->Turno_model->getTurnoTodos(),
-            'todoslossecciones' => $this->Seccion_model->getSeccionTodos(),
+            'todoslosdocentes' => $this->CA_Docente_model->getDocenteTodos(),
+            'todoslossemestres' => $this->CA_Semestre_model->getSemestreTodos(),
+            'todoslosciclos' => $this->CA_Ciclo_model->getCicloTodos(),
+            'todosloscursos' => $this->CA_Curso_model->getCursoTodos(),
+            'todoslosdias' => $this->CA_Dia_model->getDiaTodos(),
+            'todoslosturnos' => $this->CA_Turno_model->getTurnoTodos(),
+            'todoslossecciones' => $this->CA_Seccion_model->getSeccionTodos(),
         );
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');
@@ -43,12 +43,12 @@ class Cargas extends CI_Controller {
     }
     public function getcursos(){
         $valor = $this->input->post("valor");
-        $cursos = $this->Carga_model->getcursos($valor);
+        $cursos = $this->CA_Carga_model->getcursos($valor);
         echo json_encode($cursos);
     }
     public function getdias(){
         $valor = $this->input->post("valor");
-        $dias = $this->Carga_model->getdias($valor);
+        $dias = $this->CA_Carga_model->getdias($valor);
         echo json_encode($dias);
     }
     public function registrar(){
@@ -73,12 +73,12 @@ class Cargas extends CI_Controller {
             //'idtb_ciclo' => $idtb_ciclo,
             //'idtb_ciclo' => "1",
         );
-        if($this->Carga_model->save($data)){
-            $idcarga = $this->Carga_model->lastID();
+        if($this->CA_Carga_model->save($data)){
+            $idcarga = $this->CA_Carga_model->lastID();
             $this->registrar_detalle($idcarga, $iddias, $todas_las_horas_inicio, $todas_las_horas_fin);
-            redirect(base_url()."mantenimiento/cargas");
+            redirect(base_url()."controller/cargas");
         }else{
-            redirect(base_url()."mantenimiento/cargas/add");
+            redirect(base_url()."controller/cargas/add");
         }
     }
     
@@ -91,7 +91,7 @@ class Cargas extends CI_Controller {
                 'hora_inicio' => $horas_inicio[$i],
                 'hora_fin' => $horas_fin[$i],
             );
-            $this->Carga_model->save_detalle($data);
+            $this->CA_Carga_model->save_detalle($data);
         }
     }
 

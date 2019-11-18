@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col-md-12">
 
-                        <form action="<?php echo base_url(); ?>mantenimiento/seguimiento/registrar" method="POST" class="form-horizontal">
+                        <form action="<?php echo base_url(); ?>controller/seguimiento/registrar" method="POST" class="form-horizontal">
                             <div class="form-group">
                                 <div class="col-md-6">
                                     <label for="">Actividad</label>

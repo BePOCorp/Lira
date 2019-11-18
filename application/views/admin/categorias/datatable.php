@@ -1006,7 +1006,7 @@
                                                     <button type="button" class="btn btn-info btn-view" data-toggle="modal" data-target="#modal-default" value="<?php echo $docentes->idtb_docente;?>">
                                                         <span class="fa fa-search"></span>
                                                     </button>
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/categorias/edit/<?php echo $docentes->idtb_docente;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
+                                                    <a href="<?php echo base_url(); ?>controller/categorias/edit/<?php echo $docentes->idtb_docente;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
                                                     <a href="#" class="btn btn-danger"><span class="fa fa-remove"></span></a>
                                                 </div>
                                             </td>
@@ -1715,7 +1715,7 @@
     $(".btn-view").on("click", function () {
         var id = $(this).val();
         $.ajax({
-            url: base_url + "mantenimiento/categorias/view/" + id,
+            url: base_url + "controller/categorias/view/" + id,
             type: "POST",
             success: function (resp) {
                 alert(resp);

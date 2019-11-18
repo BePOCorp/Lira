@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         
-                        <form action="<?php echo base_url();?>mantenimiento/cargas/registrar" method="POST" class="form-horizontal">
+                        <form action="<?php echo base_url();?>controller/cargas/registrar" method="POST" class="form-horizontal">
                             
                             <div class="form-group">
 
@@ -319,7 +319,7 @@
                                             <button type="button" class="btn btn-info btn-view" data-toggle="modal" data-target="#modal-default" value="<?php echo $docentes->idtb_docente;?>">
                                                 <span class="fa fa-search"></span>
                                             </button>
-                                            <a href="<?php echo base_url(); ?>mantenimiento/docentes/edit/<?php echo $docentes->idtb_docente;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
+                                            <a href="<?php echo base_url(); ?>controller/docentes/edit/<?php echo $docentes->idtb_docente;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
                                             <a href="#" class="btn btn-danger"><span class="fa fa-remove"></span></a>
                                         </div>
                                         -->
@@ -388,7 +388,7 @@
                                             <button type="button" class="btn btn-info btn-view" data-toggle="modal" data-target="#modal-default" value="<?php echo $docentes->idtb_docente;?>">
                                                 <span class="fa fa-search"></span>
                                             </button>
-                                            <a href="<?php echo base_url(); ?>mantenimiento/docentes/edit/<?php echo $docentes->idtb_docente;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
+                                            <a href="<?php echo base_url(); ?>controller/docentes/edit/<?php echo $docentes->idtb_docente;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
                                             <a href="#" class="btn btn-danger"><span class="fa fa-remove"></span></a>
                                         </div>
                                         -->

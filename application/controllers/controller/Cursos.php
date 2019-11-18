@@ -14,12 +14,12 @@ class Cursos extends CI_Controller {
         
         $this->permisos = $this->backend_lib->control();
         
-        $this->load->model("Curso_model");
-        $this->load->model("Ciclo_model");
+        $this->load->model("CA_Curso_model");
+        $this->load->model("CA_Ciclo_model");
     }
     public function index() {
         $data = array(
-            'todosloscursos' => $this->Curso_model->getCursoTodos(),
+            'todosloscursos' => $this->CA_Curso_model->getCursoTodos(),
         );
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');

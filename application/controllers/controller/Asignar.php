@@ -8,14 +8,14 @@ class Asignar extends CI_Controller {
         if(!$this->session->userdata("login")){
             redirect(base_url());
         }
-        $this->load->model("Docente_model");
-        $this->load->model("Dia_model");
-        $this->load->model("Actividad_model");
-        $this->load->model("Asignar_model");
+        $this->load->model("CA_Docente_model");
+        $this->load->model("CA_Dia_model");
+        $this->load->model("CA_Actividad_model");
+        $this->load->model("CA_Asignar_model");
     }
     public function index() {
         $data = array(
-            'todaslasasignaciones' => $this->Asignar_model->getAsignacionTodos(),
+            'todaslasasignaciones' => $this->CA_Asignar_model->getAsignacionTodos(),
         );
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');
@@ -24,9 +24,9 @@ class Asignar extends CI_Controller {
     }
     public function add() {
         $data = array(
-            'todoslosdocentes' => $this->Docente_model->getDocenteTodos(),
-            'todoslosdias' => $this->Dia_model->getDiaTodos(),
-            'todaslasactividades' => $this->Actividad_model->getActividadTodos(),
+            'todoslosdocentes' => $this->CA_Docente_model->getDocenteTodos(),
+            'todoslosdias' => $this->CA_Dia_model->getDiaTodos(),
+            'todaslasactividades' => $this->CA_Actividad_model->getActividadTodos(),
         );
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');
@@ -35,12 +35,12 @@ class Asignar extends CI_Controller {
     }
     public function getcursos(){
         $valor = $this->input->post("valor");
-        $cursos = $this->Carga_model->getcursos($valor);
+        $cursos = $this->CA_Carga_model->getcursos($valor);
         echo json_encode($cursos);
     }
     public function getdias(){
         $valor = $this->input->post("valor");
-        $dias = $this->Carga_model->getdias($valor);
+        $dias = $this->CA_Carga_model->getdias($valor);
         echo json_encode($dias);
     }
     public function registrar(){
@@ -52,12 +52,12 @@ class Asignar extends CI_Controller {
             'idtb_docente' => $idtb_docente,
             'horas' => $horas,
         );
-        if($this->Asignar_model->save($data)){
-            $idcarganolectiva = $this->Asignar_model->lastID();
+        if($this->CA_Asignar_model->save($data)){
+            $idcarganolectiva = $this->CA_Asignar_model->lastID();
             $this->registrar_detalle($idcarganolectiva, $iddias, $todas_las_horas_inicio, $todas_las_horas_fin);
-            redirect(base_url()."mantenimiento/asignar");
+            redirect(base_url()."controller/asignar");
         }else{
-            redirect(base_url()."mantenimiento/asignar/add");
+            redirect(base_url()."controller/asignar/add");
         }
     }
     
@@ -70,7 +70,7 @@ class Asignar extends CI_Controller {
                 'hora_inicio' => $horas_inicio[$i],
                 'hora_fin' => $horas_fin[$i],
             );
-            $this->Asignar_model->save_detalle($data);
+            $this->CA_Asignar_model->save_detalle($data);
         }
     }
 

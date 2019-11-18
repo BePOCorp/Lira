@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Curso_model extends CI_Model {
+class CA_Curso_model extends CI_Model {
     
     public function getCursoTodos(){
         $this->db->select("cu.*, ci.descripcion as ciclo");

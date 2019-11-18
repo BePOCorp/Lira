@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Tipo_model extends CI_Model {
+class CA_Tipo_model extends CI_Model {
     
     public function getTipoTodos(){
         $this->db;

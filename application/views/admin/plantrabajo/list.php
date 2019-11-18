@@ -16,7 +16,7 @@
             <div class="box-body">              
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="<?php echo base_url(); ?>mantenimiento/plantrabajo/add" class="btn btn-primary btn-flat"><span class="fa fa-plus"></span> Agregar Plan de Trabajo </a>
+                        <a href="<?php echo base_url(); ?>controller/plantrabajo/add" class="btn btn-primary btn-flat"><span class="fa fa-plus"></span> Agregar Plan de Trabajo </a>
                     </div>
                 </div>
                 <hr>             

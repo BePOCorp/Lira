@@ -14,7 +14,7 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="<?php echo base_url(); ?>mantenimiento/categorias/add" class="btn btn-primary btn-flat"><span class="fa fa-plus"></span> Agregar Categoria</a>
+                        <a href="<?php echo base_url(); ?>controller/categorias/add" class="btn btn-primary btn-flat"><span class="fa fa-plus"></span> Agregar Categoria</a>
                     </div>
                 </div>
                 <hr>
@@ -45,7 +45,7 @@
                                                     <button type="button" class="btn btn-info btn-view" data-toggle="modal" data-target="#modal-default" value="<?php echo $docentes->idtb_docente;?>">
                                                         <span class="fa fa-search"></span>
                                                     </button>
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/categorias/edit/<?php echo $docentes->idtb_docente;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
+                                                    <a href="<?php echo base_url(); ?>controller/categorias/edit/<?php echo $docentes->idtb_docente;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
                                                     <a href="#" class="btn btn-danger"><span class="fa fa-remove"></span></a>
                                                 </div>
                                             </td>

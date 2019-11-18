@@ -10,12 +10,12 @@ class Plantrabajo extends CI_Controller {
         if(!$this->session->userdata("login")){
             redirect(base_url());
         }
-        $this->load->model("Plantrabajo_model");
-        $this->load->model("Actividad_model");
+        $this->load->model("CA_Plantrabajo_model");
+        $this->load->model("CA_Actividad_model");
     }
     public function index() {
         $data = array(
-            'todoslosplan' => $this->Plantrabajo_model->getPlantrabajo(),
+            'todoslosplan' => $this->CA_Plantrabajo_model->getPlantrabajo(),
         );
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');
@@ -25,7 +25,7 @@ class Plantrabajo extends CI_Controller {
     
     public function add() {
         $data = array(           
-            'todaslasactividades' => $this->Plantrabajo_model->getActividadPorDocente(),
+            'todaslasactividades' => $this->CA_Plantrabajo_model->getActividadPorDocente(),
         );
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');
@@ -35,7 +35,7 @@ class Plantrabajo extends CI_Controller {
     
     public function getsemana(){
         $valor = $this->input->post("valor");
-        $semana = $this->Plantrabajo_model->getsemana($valor);
+        $semana = $this->CA_Plantrabajo_model->getsemana($valor);
         echo json_encode($semana);
     }
     
@@ -44,7 +44,7 @@ class Plantrabajo extends CI_Controller {
         $descripcion = $this->input->post("plantrabajo"); 
         $numero_de_semana =$this->input->post("semanas");
         $this->registrar_plantrabajo($descripcion, $carga_no_lectiva, $numero_de_semana);
-        redirect(base_url()."mantenimiento/plantrabajo");
+        redirect(base_url()."controller/plantrabajo");
     }
     
     protected function registrar_plantrabajo( $descripcion, $carga_no_lectiva, $numero_de_semana) {
@@ -55,7 +55,7 @@ class Plantrabajo extends CI_Controller {
                 'idtb_numero_semana' => $numero_de_semana[$i],
                 'cumplimiento' => '1',
             );
-            $this->Plantrabajo_model->save($data);
+            $this->CA_Plantrabajo_model->save($data);
         }
     }
 

@@ -30,7 +30,7 @@
         $(".btn-view").on("click", function () {
             var id = $(this).val();
             $.ajax({
-                url: base_url + "mantenimiento/categorias/view/" + id,
+                url: base_url + "controller/categorias/view/" + id,
                 type: "POST",
                 success: function (resp) {
                     $("#modal-default .modal-body").html(resp);
@@ -72,7 +72,7 @@
         $("#cursoaagregar").autocomplete({
             source: function (request, response) {
                 $.ajax({
-                    url: base_url + "mantenimiento/cargas/getcursos",
+                    url: base_url + "controller/cargas/getcursos",
                     type: "POST",
                     dataType: "json",
                     data: {valor: request.term},
@@ -96,7 +96,7 @@
         $("#diaaagregar").autocomplete({
             source: function (request, response) {
                 $.ajax({
-                    url: base_url + "mantenimiento/cargas/getdias",
+                    url: base_url + "controller/cargas/getdias",
                     type: "POST",
                     dataType: "json",
                     data: {valor: request.term},
@@ -119,7 +119,7 @@
         $("#agregarsemana").autocomplete({
             source: function (request, response) {
                 $.ajax({
-                    url: base_url + "mantenimiento/plantrabajo/getsemana",
+                    url: base_url + "controller/plantrabajo/getsemana",
                     type: "POST",
                     dataType: "json",
                     data: {valor: request.term},
@@ -145,7 +145,7 @@
         $(document).on("click", ".btn-view-carga", function () {
             valor_id = $(this).val();
             $.ajax({
-                url: base_url + "mantenimiento/cargas/view",
+                url: base_url + "controller/cargas/view",
                 type: "POST",
                 dataType: "html",
                 data: {

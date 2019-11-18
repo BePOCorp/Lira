@@ -21,7 +21,7 @@
                                 <p><i class="icon fa fa-ban"></i><?php echo $this->session->flashdata("error") ?></p>
                             </div>
                         <?php endif; ?>
-                        <form action="<?php echo base_url(); ?>mantenimiento/categorias/registrar" method="POST">
+                        <form action="<?php echo base_url(); ?>controller/categorias/registrar" method="POST">
                             <div class="form-group col-md-6">
                                 <label for="plaza">Plaza</label>
                                 <input type="text" class="form-control" autofocus id="plaza"  maxlength="6"  name="plaza">

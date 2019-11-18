@@ -16,7 +16,7 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="<?php echo base_url(); ?>mantenimiento/semestres/add" class="btn btn-primary btn-flat"><span class="fa fa-plus"></span> Agregar Semestre</a>
+                        <a href="<?php echo base_url(); ?>controller/semestres/add" class="btn btn-primary btn-flat"><span class="fa fa-plus"></span> Agregar Semestre</a>
                     </div>
                 </div>
                 <hr>
@@ -40,7 +40,7 @@
                                             <td><?php echo $unsemestre->tipo; ?></td>
                                             <td>
                                                 <div class="btn-group">
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/semestres/edit/<?php echo $unsemestre->idtb_semestre;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
+                                                    <a href="<?php echo base_url(); ?>controller/semestres/edit/<?php echo $unsemestre->idtb_semestre;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
                                                 </div>
                                             </td>
                                         </tr>

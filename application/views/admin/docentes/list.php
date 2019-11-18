@@ -16,7 +16,7 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="<?php echo base_url(); ?>mantenimiento/docentes/add" class="btn btn-primary btn-flat"><span class="fa fa-plus"></span> Agregar Docente</a>
+                        <a href="<?php echo base_url(); ?>controller/docentes/add" class="btn btn-primary btn-flat"><span class="fa fa-plus"></span> Agregar Docente</a>
                     </div>
                 </div>
                 <hr>
@@ -53,7 +53,7 @@
                                                         <span class="fa fa-search"></span>
                                                     </button>-->
                                                     
-                                                    <a href="<?php echo base_url(); ?>mantenimiento/docentes/edit/<?php echo $docentes->idtb_docente;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
+                                                    <a href="<?php echo base_url(); ?>controller/docentes/edit/<?php echo $docentes->idtb_docente;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
                                                     
 <!--                                                    <a href="#" class="btn btn-danger"><span class="fa fa-remove"></span></a>-->
                                                     

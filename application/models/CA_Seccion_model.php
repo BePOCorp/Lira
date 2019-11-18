@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Seccion_model extends CI_Model {
+class CA_Seccion_model extends CI_Model {
     
     public function getSeccionTodos(){
         $this->db;

@@ -8,13 +8,13 @@ class Docentes extends CI_Controller {
         if(!$this->session->userdata("login")){
             redirect(base_url());
         }
-        $this->load->model("Usuario_model");
-        $this->load->model("Docente_model");
-        $this->load->model("Tipo_Docente_model");
+        $this->load->model("CA_Usuario_model");
+        $this->load->model("CA_Docente_model");
+        $this->load->model("CA_Tipo_Docente_model");
     }
     public function index() {
         $data = array(
-            'docentes' => $this->Docente_model->getDocenteTodos(),
+            'docentes' => $this->CA_Docente_model->getDocenteTodos(),
         );
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');
@@ -24,7 +24,7 @@ class Docentes extends CI_Controller {
     }
     public function add() {
         $data = array (
-            'tiposdocentes' => $this->Tipo_Docente_model->getTipoDocenteTodos(),
+            'tiposdocentes' => $this->CA_Tipo_Docente_model->getTipoDocenteTodos(),
         );
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');
@@ -50,21 +50,21 @@ class Docentes extends CI_Controller {
                 'idtb_tipo_docente' => $tipodocentelista,            
                 'idtb_usuario' => $idtb_usuario
             );            
-            if ($this->Docente_model->save($data_docente)) {
-                redirect(base_url() . "mantenimiento/docentes");
+            if ($this->CA_Docente_model->save($data_docente)) {
+                redirect(base_url() . "controller/docentes");
             } else {
                 $this->session->set_flashdata("error", "No se pudo guardar la informacion");
-                redirect(base_url() . "mantenimiento/docentes/add");
+                redirect(base_url() . "controller/docentes/add");
             }
         } else {
             $this->session->set_flashdata("error", "No se pudo guardar la informacion");
-            redirect(base_url() . "mantenimiento/docentes/add");
+            redirect(base_url() . "controller/docentes/add");
         }
     }
     public function edit($iddocente) {
         $data = array(
-            'undocente' => $this->Docente_model->getDocente($iddocente),
-            'tiposdocentes' => $this->Tipo_Docente_model->getTipoDocenteTodos(),
+            'undocente' => $this->CA_Docente_model->getDocente($iddocente),
+            'tiposdocentes' => $this->CA_Tipo_Docente_model->getTipoDocenteTodos(),
         );
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');
@@ -90,15 +90,15 @@ class Docentes extends CI_Controller {
                 'documento' => $documento,
                 'idtb_tipo_docente' => $tipodocentelista
             );
-            if ($this->Docente_model->update($docente, $data_docente)) {
-                redirect(base_url() . "mantenimiento/docentes");
+            if ($this->CA_Docente_model->update($docente, $data_docente)) {
+                redirect(base_url() . "controller/docentes");
             } else {
                 $this->session->set_flashdata("error", "No se pudo actualizar la informacion");
-                redirect(base_url() . "mantenimiento/docentes/edit/" . $docente);
+                redirect(base_url() . "controller/docentes/edit/" . $docente);
             }
         } else {
             $this->session->set_flashdata("error", "No se pudo actualizar la informacion");
-            redirect(base_url() . "mantenimiento/docentes/edit/" . $docente);
+            redirect(base_url() . "controller/docentes/edit/" . $docente);
         }
     }
 }

@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Plantrabajo_model extends CI_Model {
+class CA_Plantrabajo_model extends CI_Model {
 
     public function getPlantrabajo(){
         $this->db->select("pt.descripcion plantrabajo, sem.descripcion semana, a.descripcion actividad");

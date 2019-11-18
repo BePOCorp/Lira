@@ -8,12 +8,12 @@ class Semestres extends CI_Controller {
         if(!$this->session->userdata("login")){
             redirect(base_url());
         }
-        $this->load->model("Semestre_model");
-        $this->load->model("Tipo_model");
+        $this->load->model("CA_Semestre_model");
+        $this->load->model("CA_Tipo_model");
     }
     public function index() {
         $data = array(
-            'todoslossemestres' => $this->Semestre_model->getSemestreTodos(),
+            'todoslossemestres' => $this->CA_Semestre_model->getSemestreTodos(),
         );
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');
@@ -22,7 +22,7 @@ class Semestres extends CI_Controller {
     }
     public function add() {
         $data = array (
-            'todoslostipos' => $this->Tipo_model->getTipoTodos(),
+            'todoslostipos' => $this->CA_Tipo_model->getTipoTodos(),
         );
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');
@@ -36,17 +36,17 @@ class Semestres extends CI_Controller {
             'descripcion' => $descripcion,
             'idtb_tipo' => $tipolista
         );
-        if ($this->Semestre_model->save($data_semestre)) {
-            redirect(base_url() . "mantenimiento/semestres");
+        if ($this->CA_Semestre_model->save($data_semestre)) {
+            redirect(base_url() . "controller/semestres");
         } else {
             $this->session->set_flashdata("error", "No se pudo guardar la informacion");
-            redirect(base_url() . "mantenimiento/semestres/add");
+            redirect(base_url() . "controller/semestres/add");
         }
     }
     public function edit($idsemestre) {
         $data = array(
-            'unsemestre' => $this->Semestre_model->getSemestre($idsemestre),
-            'tipos' => $this->Tipo_model->getTipoTodos(),
+            'unsemestre' => $this->CA_Semestre_model->getSemestre($idsemestre),
+            'tipos' => $this->CA_Tipo_model->getTipoTodos(),
         );
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');
@@ -61,11 +61,11 @@ class Semestres extends CI_Controller {
             'descripcion' => $descripcion,
             'idtb_tipo' => $tipolista,
         );
-        if ($this->Semestre_model->update($semestre, $data_semestre)) {
-                redirect(base_url() . "mantenimiento/semestres");
+        if ($this->CA_Semestre_model->update($semestre, $data_semestre)) {
+                redirect(base_url() . "controller/semestres");
         } else {
             $this->session->set_flashdata("error", "No se pudo actualizar la informacion");
-            redirect(base_url() . "mantenimiento/semestres/edit/" . $semestre);
+            redirect(base_url() . "controller/semestres/edit/" . $semestre);
         }
     }
 }

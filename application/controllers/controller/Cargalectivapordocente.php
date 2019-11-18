@@ -8,18 +8,18 @@ class Cargalectivapordocente extends CI_Controller {
         if(!$this->session->userdata("login")){
             redirect(base_url());
         }
-        $this->load->model("Carga_model");
-        $this->load->model("Docente_model");
-        $this->load->model("Curso_model");
-        $this->load->model("Semestre_model");
-        $this->load->model("Ciclo_model");
-        $this->load->model("Dia_model");
-        $this->load->model("Seccion_model");
-        $this->load->model("Turno_model");
+        $this->load->model("CA_Carga_model");
+        $this->load->model("CA_Docente_model");
+        $this->load->model("CA_Curso_model");
+        $this->load->model("CA_Semestre_model");
+        $this->load->model("CA_Ciclo_model");
+        $this->load->model("CA_Dia_model");
+        $this->load->model("CA_Seccion_model");
+        $this->load->model("CA_Turno_model");
     }
     public function index() {
         $data = array(
-            'todaslascargaspordocente' => $this->Carga_model->getCargaTodosPorDocente(),
+            'todaslascargaspordocente' => $this->CA_Carga_model->getCargaTodosPorDocente(),
         );
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');

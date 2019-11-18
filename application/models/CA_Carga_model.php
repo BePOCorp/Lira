@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Carga_model extends CI_Model {
+class CA_Carga_model extends CI_Model {
     
     public function getCargaTodos(){
         $this->db->select("car.*, sem.descripcion as semestre, CONCAT(usu.nombre, ' ', usu.apellido) as docente, sec.descripcion as seccion, tur.descripcion as turno, cur.descripcion as curso");

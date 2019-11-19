@@ -6,7 +6,7 @@ class Auth extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-        $this->load->model("Usuario_model");
+        $this->load->model("CA_Usuario_model");
     }
 
     public function index() {
@@ -19,7 +19,7 @@ class Auth extends CI_Controller {
     public function login() {
         $username = $this->input->post("username");
         $password = $this->input->post("password");
-        $res = $this->Usuario_model->login($username, $password);
+        $res = $this->CA_Usuario_model->login($username, $password);
         if (!$res) {
             $this->session->set_flashdata("Error", "El usuario y/o contraseña son incorrectos");
             redirect(base_url());

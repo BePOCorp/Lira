@@ -37,8 +37,8 @@
                 <ul class="treeview-menu">
                     <li><a href="<?php echo base_url(); ?>controller/actividades"><i class="fa fa-circle-o"></i> Actividades</a></li>
                     <li><a href="<?php echo base_url(); ?>controller/asignar"><i class="fa fa-circle-o"></i> Asignar Carga no Lectiva</a></li>
-                    <li><a href="<?php echo base_url(); ?>controller/plantrabajo"><i class="fa fa-circle-o"></i> Plan de Trabajo</a></li>
-                    <li><a href="<?php echo base_url(); ?>controller/seguimiento"><i class="fa fa-circle-o"></i> Seguimiento</a></li>
+<!--                    <li><a href="<?php echo base_url(); ?>controller/plantrabajo"><i class="fa fa-circle-o"></i> Plan de Trabajo</a></li>
+                    <li><a href="<?php echo base_url(); ?>controller/seguimiento"><i class="fa fa-circle-o"></i> Seguimiento</a></li>-->
                 </ul>
             </li>
             <li class="treeview">

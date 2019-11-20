@@ -38,7 +38,7 @@
                                 <?php if (!empty($todaslascargas)): ?>
                                     <?php foreach ($todaslascargas as $carga): ?>
                                         <tr>
-                                            <td><?php echo $carga->idtb_carga; ?></td>
+                                            <td><?php echo $carga->id_carga; ?></td>
                                             <td><?php echo $carga->semestre; ?></td>
                                             <td><?php echo $carga->docente; ?></td>
                                             <td><?php echo $carga->curso; ?></td>
@@ -54,7 +54,7 @@
 <!--                                                    <button type="button" class="btn btn-info btn-view-carga" data-toggle="modal" data-target="#modal-default" value="<?php echo $carga->idtb_carga;?>">
                                                         <span class="fa fa-search"></span>
                                                     </button>-->
-                                                    <a href="<?php echo base_url(); ?>controller/cargas/edit/<?php echo $carga->idtb_carga;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
+                                                    <a href="<?php echo base_url(); ?>controller/cargas/edit/<?php echo $carga->id_carga;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
                                                     
 <!--                                                    <a href="#" class="btn btn-danger"><span class="fa fa-remove"></span></a>-->
                                                     

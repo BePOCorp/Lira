@@ -33,7 +33,8 @@ class Seguimiento extends CI_Controller {
     }
 
     public function add() {
-        $iddocente = $this->session->userdata("idtb_usuario");
+//        $iddocente = $this->session->userdata("idtb_usuario");
+        $iddocente = $this->session->userdata("id_usuario");
         $idactividad = $this->input->post("id_un_actividad");
         $data = array(
             'todaslasactividades' => $this->CA_Plantrabajo_model->getActividadPorDocente(),
@@ -47,10 +48,12 @@ class Seguimiento extends CI_Controller {
     }
 
     public function registrar() {
-        $idtb_plan_de_trabajo = $this->input->post("id_un_plan");
+//        $idtb_plan_de_trabajo = $this->input->post("id_un_plan");
+        $id_plan_de_trabajo = $this->input->post("id_un_plan");
         $descripcion = $this->input->post("textarea");
         $data = array(
-            'idtb_plan_de_trabajo' => $idtb_plan_de_trabajo,
+//            'idtb_plan_de_trabajo' => $idtb_plan_de_trabajo,
+            'id_plan_de_trabajo' => $id_plan_de_trabajo,
             'descripcion' => $descripcion,
         );
         $this->CA_Seguimiento_model->save($data);

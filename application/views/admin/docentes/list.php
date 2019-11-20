@@ -26,26 +26,26 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Codigo</th>
-                                    <th>Documento</th>
-                                    <th>Nombre</th>
-                                    <th>Apellido</th>
-                                    <th>Tipo usuario</th>
-                                    <th>Tipo docente</th>
+                                    <th>Nombre Completo</th>
+                                    <th>Telefono</th>
+                                    <th>Direccion</th>
+                                    <th>Correo</th>
+<!--                                    <th>Jefe Departamento</th>
+                                    <th>Postulante</th>-->
                                     <th>Accion</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php if (!empty($docentes)): ?>
-                                    <?php foreach ($docentes as $docentes): ?>
+                                    <?php foreach ($docentes as $un_docente): ?>
                                         <tr>
-                                            <td><?php echo $docentes->idtb_docente; ?></td>
-                                            <td><?php echo $docentes->codigo; ?></td>
-                                            <td><?php echo $docentes->documento; ?></td>
-                                            <td><?php echo $docentes->nombre; ?></td>
-                                            <td><?php echo $docentes->apellido; ?></td>
-                                            <td><?php echo $docentes->tipousuario; ?></td>
-                                            <td><?php echo $docentes->tipodocente; ?></td>
+                                            <td><?php echo $un_docente->id_docente; ?></td>
+                                            <td><?php echo $un_docente->docente; ?></td>
+                                            <td><?php echo $un_docente->telefono; ?></td>
+                                            <td><?php echo $un_docente->id_direccion; ?></td>
+                                            <td><?php echo $un_docente->correo; ?></td>
+<!--                                            <td><?php echo $un_docente->jefe_departamento; ?></td>
+                                            <td><?php echo $un_docente->id_postulante; ?></td>-->
                                             <td>
                                                 <div class="btn-group">
                                                     
@@ -53,7 +53,7 @@
                                                         <span class="fa fa-search"></span>
                                                     </button>-->
                                                     
-                                                    <a href="<?php echo base_url(); ?>controller/docentes/edit/<?php echo $docentes->idtb_docente;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
+                                                    <a href="<?php echo base_url(); ?>controller/docentes/edit/<?php echo $un_docente->id_docente;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
                                                     
 <!--                                                    <a href="#" class="btn btn-danger"><span class="fa fa-remove"></span></a>-->
                                                     

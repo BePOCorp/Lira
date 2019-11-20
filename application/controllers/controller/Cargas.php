@@ -51,27 +51,69 @@ class Cargas extends CI_Controller {
         $dias = $this->CA_Carga_model->getdias($valor);
         echo json_encode($dias);
     }
+    
+    
+    
+//    public function registrar(){
+//        $idtb_seccion = $this->input->post("idseccion");
+//        $idtb_turno = $this->input->post("idturno");
+//        //$idtb_curso = $this->input->post("idcurso");
+//        $idtb_curso = $this->input->post("id_un_curso");
+//        $idtb_semestre = $this->input->post("semestre");
+//        $idtb_docente = $this->input->post("id_un_docente");
+//        //$idtb_ciclo = $this->input->post("idciclo");
+//        
+//        $iddias = $this->input->post("arreglo_dias");
+//        $todas_las_horas_inicio = $this->input->post("arreglo_horas_inicio");
+//        $todas_las_horas_fin = $this->input->post("arreglo_horas_fin");
+//        
+//        $data = array(
+//            'idtb_seccion' => $idtb_seccion,
+//            'idtb_turno' => $idtb_turno,
+//            'idtb_curso' => $idtb_curso,
+//            'idtb_semestre' => $idtb_semestre,
+//            'idtb_docente' => $idtb_docente,
+//            //'idtb_ciclo' => $idtb_ciclo,
+//            //'idtb_ciclo' => "1",
+//        );
+//        if($this->CA_Carga_model->save($data)){
+//            $idcarga = $this->CA_Carga_model->lastID();
+//            $this->registrar_detalle($idcarga, $iddias, $todas_las_horas_inicio, $todas_las_horas_fin);
+//            redirect(base_url()."controller/cargas");
+//        }else{
+//            redirect(base_url()."controller/cargas/add");
+//        }
+//    }
+//    protected function registrar_detalle($carga, $dias, $horas_inicio, $horas_fin) {
+//        for($i = 0; $i < count($dias); $i++){
+//            $data = array(
+//                'idtb_carga' => $carga,
+//                'idtb_dia' => $dias[$i],
+//                'hora_inicio' => $horas_inicio[$i],
+//                'hora_fin' => $horas_fin[$i],
+//            );
+//            $this->CA_Carga_model->save_detalle($data);
+//        }
+//    }
+
+    
     public function registrar(){
-        $idtb_seccion = $this->input->post("idseccion");
-        $idtb_turno = $this->input->post("idturno");
-        //$idtb_curso = $this->input->post("idcurso");
-        $idtb_curso = $this->input->post("id_un_curso");
-        $idtb_semestre = $this->input->post("semestre");
-        $idtb_docente = $this->input->post("id_un_docente");
-        //$idtb_ciclo = $this->input->post("idciclo");
+        $id_seccion = $this->input->post("idseccion");
+        $id_turno = $this->input->post("idturno");
+        $id_curso = $this->input->post("id_un_curso");
+        $id_semestre = $this->input->post("semestre");
+        $id_docente = $this->input->post("id_un_docente");
         
         $iddias = $this->input->post("arreglo_dias");
         $todas_las_horas_inicio = $this->input->post("arreglo_horas_inicio");
         $todas_las_horas_fin = $this->input->post("arreglo_horas_fin");
         
         $data = array(
-            'idtb_seccion' => $idtb_seccion,
-            'idtb_turno' => $idtb_turno,
-            'idtb_curso' => $idtb_curso,
-            'idtb_semestre' => $idtb_semestre,
-            'idtb_docente' => $idtb_docente,
-            //'idtb_ciclo' => $idtb_ciclo,
-            //'idtb_ciclo' => "1",
+            'id_seccion' => $id_seccion,
+            'id_turno' => $id_turno,
+            'id_curso' => $id_curso,
+            'id_semestre' => $id_semestre,
+            'id_docente' => $id_docente,
         );
         if($this->CA_Carga_model->save($data)){
             $idcarga = $this->CA_Carga_model->lastID();
@@ -81,20 +123,18 @@ class Cargas extends CI_Controller {
             redirect(base_url()."controller/cargas/add");
         }
     }
-    
-
     protected function registrar_detalle($carga, $dias, $horas_inicio, $horas_fin) {
         for($i = 0; $i < count($dias); $i++){
             $data = array(
-                'idtb_carga' => $carga,
-                'idtb_dia' => $dias[$i],
+                'id_carga' => $carga,
+                'id_dia' => $dias[$i],
                 'hora_inicio' => $horas_inicio[$i],
                 'hora_fin' => $horas_fin[$i],
             );
             $this->CA_Carga_model->save_detalle($data);
         }
     }
-
+    
     
     public function view(){
 //        $idcarga = $this->input->post("idtb_carga");

@@ -8,7 +8,7 @@
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN NAVIGATION</li>
             <li>
-                <a href="../widgets.html">
+                <a href="<?php echo base_url(); ?>/dashboard">
                     <i class="fa fa-home"></i> <span>Inicio</span>
                 </a>
             </li>
@@ -38,7 +38,7 @@
                     <li><a href="<?php echo base_url(); ?>controller/seguimiento"><i class="fa fa-circle-o"></i> Seguimiento</a></li>
                 </ul>
             </li>
-            <li class="treeview">
+<!--            <li class="treeview">
                 <a href="#">
                     <i class="fa fa-print"></i> <span>Reportes</span>
                     <span class="pull-right-container">
@@ -63,7 +63,7 @@
                     <li><a href="../../index.html"><i class="fa fa-circle-o"></i> Tipo Documentos</a></li>
                     <li><a href="../../index.html"><i class="fa fa-circle-o"></i> Usuarios</a></li>
                 </ul>
-            </li>
+            </li>-->
         </ul>
     </section>
     <!-- /.sidebar -->

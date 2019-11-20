@@ -5,7 +5,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Plan de Trabajo
+            Plan de trabajo
             <small>Listado</small>
         </h1>
     </section>
@@ -25,18 +25,20 @@
                         <table  id="example1" class="table table-bordered btn-hover">
                             <thead>
                                 <tr>
-                                    <th>Semana</th>
                                     <th>Actividad</th>
-                                    <th>Plan de Trabajo</th>                                   
+                                    <th>Semana</th>
+                                    <th>Plan de Trabajo</th>
+                                    <th>Cumplimiento</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php if (!empty($todoslosplan)): ?>
                                     <?php foreach ($todoslosplan as $plan): ?>
                                 <tr>
-                                    <td><?php echo $plan->semana; ?></td>
                                     <td><?php echo $plan->actividad; ?></td>
-                                    <td><?php echo $plan->plantrabajo; ?></td>
+                                    <td><?php echo $plan->semana; ?></td>
+                                    <td><?php echo $plan->plan_de_trabajo; ?></td>
+                                    <td><?php echo $plan->cumplimiento; ?></td>
                                 </tr>
                                     <?php endforeach; ?>
                                 <?php endif; ?>

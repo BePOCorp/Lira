@@ -12,7 +12,7 @@ class Cursos extends CI_Controller {
             redirect(base_url());
         }
         
-        $this->permisos = $this->backend_lib->control();
+//        $this->permisos = $this->backend_lib->control();
         
         $this->load->model("CA_Curso_model");
         $this->load->model("CA_Ciclo_model");

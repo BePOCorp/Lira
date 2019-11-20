@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Asignar extends CI_Controller {
+class Asignarpordocente extends CI_Controller {
     public function __construct() {
         parent::__construct();
         if(!$this->session->userdata("login")){
@@ -15,11 +15,11 @@ class Asignar extends CI_Controller {
     }
     public function index() {
         $data = array(
-            'todaslasasignaciones' => $this->CA_Asignar_model->getAsignacionTodos(),
+            'todaslasasignaciones' => $this->CA_Asignar_model->getAsignacionTodosPorDocente(),
         );
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');
-        $this->load->view('admin/asignar/list', $data);
+        $this->load->view('admin/asignarpordocente/list', $data);
         $this->load->view('layouts/footer');
     }
     public function add() {

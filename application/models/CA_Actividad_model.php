@@ -5,6 +5,7 @@ class CA_Actividad_model extends CI_Model {
     
     public function getActividadTodos(){
 //        $resultados = $this->db->get("tb_actividad");
+        $this->db->select("id id_actividad, descripcion");
         $resultados = $this->db->get("actividad");
         return $resultados->result();
     }
@@ -15,14 +16,14 @@ class CA_Actividad_model extends CI_Model {
     public function getActividad($idactividad){
 //        $this->db->where("idtb_actividad",$idactividad);
 //        $resultado = $this->db->get("tb_actividad");
-        $this->db->where("id_actividad",$idactividad);
+        $this->db->where("id",$idactividad);
         $resultado = $this->db->get("actividad");
         return $resultado->row();
     }
     public function update($id,$data){
 //        $this->db->where("idtb_actividad",$id);
 //        return $this->db->update("tb_actividad",$data);
-        $this->db->where("id_actividad",$id);
+        $this->db->where("id",$id);
         return $this->db->update("actividad",$data);
     }
 }

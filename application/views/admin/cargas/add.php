@@ -25,7 +25,7 @@
                                     <label for="">Semestre</label>
                                     <select name="semestre" id="semestre" class="form-control" required>
                                         <?php foreach ($todoslossemestres as $unsemestre): ?>
-                                            <option value="<?php echo $unsemestre->idtb_semestre; ?>" ><?php echo $unsemestre->descripcion; ?></option>
+                                            <option value="<?php echo $unsemestre->id_semestre; ?>" ><?php echo $unsemestre->descripcion; ?></option>
                                         <?php endforeach; ?>
                                         <!--
                                         <option value="">Seleccione...</option>
@@ -144,7 +144,7 @@
                                     <label for="seccion">Seccion</label>
                                     <select class="form-control" id="idseccion" name="idseccion">
                                         <?php foreach($todoslossecciones as $seccion): ?>
-                                            <option value="<?php echo $seccion->idtb_seccion ?>" ><?php echo $seccion->descripcion; ?></option>
+                                            <option value="<?php echo $seccion->id_seccion ?>" ><?php echo $seccion->descripcion; ?></option>
                                         <?php endforeach; ?>
                                     </select>
                                 </div>
@@ -172,7 +172,7 @@
                                     <label for="turno">Turno</label>
                                     <select class="form-control" id="idturno" name="idturno">
                                         <?php foreach($todoslosturnos as $turno): ?>
-                                            <option value="<?php echo $turno->idtb_turno ?>" ><?php echo $turno->descripcion; ?></option>
+                                            <option value="<?php echo $turno->id_turno ?>" ><?php echo $turno->descripcion; ?></option>
                                         <?php endforeach; ?>
                                     </select>
                                 </div>
@@ -290,10 +290,7 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Codigo</th>
-                            <th>Documento</th>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
+                            <th>Datos Completos</th>
                             <th>Opcion</th>
                         </tr>
                     </thead>
@@ -301,17 +298,9 @@
                         <?php if (!empty($todoslosdocentes)): ?>
                             <?php foreach ($todoslosdocentes as $docente): ?>
                                 <tr>
-                                    <td><?php echo $docente->idtb_docente; ?></td>
-                                    <td><?php echo $docente->codigo; ?></td>
-                                    <td><?php echo $docente->documento; ?></td>
-                                    <td><?php echo $docente->nombre; ?></td>
-                                    <td><?php echo $docente->apellido; ?></td>
-                                    <!--
-                                    <td><?php echo $docente->apellido; ?></td>
-                                    <td><?php echo $docente->tipousuario; ?></td>
-                                    <td><?php echo $docente->tipodocente; ?></td>
-                                    -->
-                                    <?php $datadocente = $docente->idtb_docente."*".$docente->codigo."*".$docente->documento."*".$docente->nombre."*".$docente->apellido; ?>
+                                    <td><?php echo $docente->id_docente; ?></td>
+                                    <td><?php echo $docente->docente; ?></td>
+                                    <?php $datadocente = $docente->id_docente."*".$docente->docente; ?>
                                     <td>
                                         <button type="button" class="btn btn-success btn-check btn-check-docente" value="<?php echo $datadocente; ?>" ><span class="fa fa-check"></span></button>
                                         <!--
@@ -370,7 +359,7 @@
                         <?php if (!empty($todosloscursos)): ?>
                             <?php foreach ($todosloscursos as $curso): ?>
                                 <tr>
-                                    <td><?php echo $curso->idtb_curso; ?></td>
+                                    <td><?php echo $curso->id_curso; ?></td>
                                     <td><?php echo $curso->codigo; ?></td>
                                     <td><?php echo $curso->descripcion; ?></td>
                                     <td><?php echo $curso->creditos; ?></td>
@@ -380,7 +369,7 @@
                                     <td><?php echo $docente->tipousuario; ?></td>
                                     <td><?php echo $docente->tipodocente; ?></td>
                                     -->
-                                    <?php $datacurso = $curso->idtb_curso."*".$curso->codigo."*".$curso->descripcion."*".$curso->creditos."*".$curso->ciclo; ?>
+                                    <?php $datacurso = $curso->id_curso."*".$curso->codigo."*".$curso->descripcion."*".$curso->creditos."*".$curso->ciclo; ?>
                                     <td>
                                         <button type="button" class="btn btn-success btn-check btn-check-curso" value="<?php echo $datacurso; ?>" ><span class="fa fa-check"></span></button>
                                         <!--

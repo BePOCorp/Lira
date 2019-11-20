@@ -8,7 +8,7 @@
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN NAVIGATION</li>
             <li>
-                <a href="../widgets.html">
+                <a href="<?php echo base_url(); ?>/dashboard">
                     <i class="fa fa-home"></i> <span>Inicio</span>
                 </a>
             </li>
@@ -36,12 +36,13 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="<?php echo base_url(); ?>controller/actividades"><i class="fa fa-circle-o"></i> Actividades</a></li>
-                    <li><a href="<?php echo base_url(); ?>controller/asignar"><i class="fa fa-circle-o"></i> Asignar Carga no Lectiva</a></li>
-<!--                    <li><a href="<?php echo base_url(); ?>controller/plantrabajo"><i class="fa fa-circle-o"></i> Plan de Trabajo</a></li>
-                    <li><a href="<?php echo base_url(); ?>controller/seguimiento"><i class="fa fa-circle-o"></i> Seguimiento</a></li>-->
+                    <li><a href="<?php echo base_url(); ?>controller/asignar"><i class="fa fa-circle-o"></i> Carga no lectiva</a></li>
+                    <li><a href="<?php echo base_url(); ?>controller/asignarpordocente"><i class="fa fa-circle-o"></i> Mi carga no lectiva</a></li>
+                    <li><a href="<?php echo base_url(); ?>controller/plantrabajo"><i class="fa fa-circle-o"></i> Plan de trabajo</a></li>
+                    <li><a href="<?php echo base_url(); ?>controller/seguimiento"><i class="fa fa-circle-o"></i> Seguimiento</a></li>
                 </ul>
             </li>
-            <li class="treeview">
+<!--            <li class="treeview">
                 <a href="#">
                     <i class="fa fa-print"></i> <span>Reportes</span>
                     <span class="pull-right-container">
@@ -66,7 +67,7 @@
                     <li><a href="../../index.html"><i class="fa fa-circle-o"></i> Tipo Documentos</a></li>
                     <li><a href="../../index.html"><i class="fa fa-circle-o"></i> Usuarios</a></li>
                 </ul>
-            </li>
+            </li>-->
         </ul>
     </section>
     <!-- /.sidebar -->

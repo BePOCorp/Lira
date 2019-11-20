@@ -24,7 +24,7 @@ class Docentes extends CI_Controller {
     }
     public function add() {
         $data = array (
-            'tiposdocentes' => $this->CA_Tipo_Docente_model->getTipoDocenteTodos(),
+            'tipos_de_docente' => $this->CA_Tipo_Docente_model->getTipoDocenteTodos(),
         );
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');
@@ -40,15 +40,19 @@ class Docentes extends CI_Controller {
         $data_usuario = array(
             'nombre' => $nombre,
             'apellido' => $apellido,
-            'idtb_tipo_usuario' => "2"  //Docente
+//            'idtb_tipo_usuario' => "2"  //Docente
+            'id_tipo_usuario' => "2"  //Docente
         );
         if ($this->Usuario_model->save($data_usuario)) {
-            $idtb_usuario = $this->Usuario_model->lastID();
+//            $idtb_usuario = $this->Usuario_model->lastID();
+            $id_usuario = $this->Usuario_model->lastID();
             $data_docente = array(
                 'codigo' => $codigo,
                 'documento' => $documento,
-                'idtb_tipo_docente' => $tipodocentelista,            
-                'idtb_usuario' => $idtb_usuario
+//                'idtb_tipo_docente' => $tipodocentelista,            
+//                'idtb_usuario' => $idtb_usuario
+                'id_tipo_docente' => $tipodocentelista,            
+                'id_usuario' => $id_usuarios
             );            
             if ($this->CA_Docente_model->save($data_docente)) {
                 redirect(base_url() . "controller/docentes");
@@ -88,7 +92,8 @@ class Docentes extends CI_Controller {
             $data_docente = array(
                 'codigo' => $codigo,
                 'documento' => $documento,
-                'idtb_tipo_docente' => $tipodocentelista
+//                'idtb_tipo_docente' => $tipodocentelista
+                'id_tipo_docente' => $tipodocentelista
             );
             if ($this->CA_Docente_model->update($docente, $data_docente)) {
                 redirect(base_url() . "controller/docentes");

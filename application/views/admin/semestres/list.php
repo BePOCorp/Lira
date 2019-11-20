@@ -26,6 +26,7 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
+                                    <th>Numero</th>
                                     <th>Descripcion</th>
                                     <th>Tipo</th>
                                     <th>Accion</th>
@@ -35,12 +36,13 @@
                                 <?php if (!empty($todoslossemestres)): ?>
                                     <?php foreach ($todoslossemestres as $unsemestre): ?>
                                         <tr>
-                                            <td><?php echo $unsemestre->idtb_semestre; ?></td>
+                                            <td><?php echo $unsemestre->id_semestre; ?></td>
+                                            <td><?php echo $unsemestre->numero; ?></td>
                                             <td><?php echo $unsemestre->descripcion; ?></td>
                                             <td><?php echo $unsemestre->tipo; ?></td>
                                             <td>
                                                 <div class="btn-group">
-                                                    <a href="<?php echo base_url(); ?>controller/semestres/edit/<?php echo $unsemestre->idtb_semestre;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
+                                                    <a href="<?php echo base_url(); ?>controller/semestres/edit/<?php echo $unsemestre->id_semestre;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
                                                 </div>
                                             </td>
                                         </tr>

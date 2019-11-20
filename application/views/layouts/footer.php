@@ -86,7 +86,8 @@
             minLength: 2,
             select: function (event, ui) {
                 //Por estandar
-                data = ui.item.idtb_curso + "*" + ui.item.codigo + "*" + ui.item.label + "*" + ui.item.creditos + "*" + ui.item.idtb_ciclo;
+//                data = ui.item.idtb_curso + "*" + ui.item.codigo + "*" + ui.item.label + "*" + ui.item.creditos + "*" + ui.item.idtb_ciclo;
+                data = ui.item.id_curso + "*" + ui.item.codigo + "*" + ui.item.label + "*" + ui.item.creditos + "*" + ui.item.idtb_ciclo;
                 //data = ui.item.idtb_curso;
                 $("#btn-agregar").val(data);
             }
@@ -133,7 +134,8 @@
             minLength: 2,
             select: function (event, ui) {
                 //Por estandar
-                data = ui.item.idtb_numero_semana + "*" + ui.item.label;
+//                data = ui.item.idtb_numero_semana + "*" + ui.item.label;
+                data = ui.item.id_numero_semana + "*" + ui.item.label;
                 //data = ui.item.idtb_curso;
                 $("#btn-agregar-semana").val(data);
             }

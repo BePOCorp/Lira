@@ -26,9 +26,13 @@ class Auth extends CI_Controller {
         } else {
             $data = array(
                 //'id' => $res->id,
-                'idtb_usuario' => $res->idtb_usuario,
-                'nombre' => $res->nombre,
-                'idtb_tipo_usuario' => $res->idtb_tipo_usuario,
+//                'idtb_usuario' => $res->idtb_usuario,
+//                'nombre' => $res->nombre,
+//                'idtb_tipo_usuario' => $res->idtb_tipo_usuario,
+//                'login' => TRUE,
+                'id' => $res->id,
+                'nombres' => $res->nombres,
+//                'id_tipo_usuario' => $res->id_tipo_usuario,
                 'login' => TRUE,
             );
             $this->session->set_userdata($data);

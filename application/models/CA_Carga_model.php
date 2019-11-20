@@ -12,14 +12,13 @@ class CA_Carga_model extends CI_Model {
 //        $this->db->join("tb_seccion sec", "car.idtb_seccion = sec.idtb_seccion");
 //        $this->db->join("tb_turno tur", "car.idtb_turno = tur.idtb_turno");
 //        $this->db->join("tb_curso cur", "car.idtb_curso = cur.idtb_curso");
-        $this->db->select("car.*, sem.descripcion as semestre, CONCAT(usu.nombre, ' ', usu.apellido) as docente, sec.descripcion as seccion, tur.descripcion as turno, cur.descripcion as curso");
+        $this->db->select("car.id id_carga, sem.descripcion as semestre, CONCAT(doc.nombres, ' ', doc.apellido_paterno, ' ', doc.apellido_materno) as docente, sec.descripcion as seccion, tur.descripcion as turno, cur.descripcion as curso");
         $this->db->from("carga car");
-        $this->db->join("semestre sem", "car.id_semestre = sem.id_semestre");
-        $this->db->join("docente doc", "car.id_docente = doc.id_docente");
-        $this->db->join("usuario usu", "doc.id_usuario = usu.id_usuario");
-        $this->db->join("seccion sec", "car.id_seccion = sec.id_seccion");
-        $this->db->join("turno tur", "car.id_turno = tur.id_turno");
-        $this->db->join("curso cur", "car.id_curso = cur.id_curso");
+        $this->db->join("semestre sem", "car.id_semestre = sem.id");
+        $this->db->join("docente doc", "car.id_docente = doc.id");
+        $this->db->join("seccion sec", "car.id_seccion = sec.id");
+        $this->db->join("turno tur", "car.id_turno = tur.id");
+        $this->db->join("curso cur", "car.id_curso = cur.id");
         $resultados = $this->db->get();
         return $resultados->result();
     }
@@ -28,7 +27,7 @@ class CA_Carga_model extends CI_Model {
 //        $this->db->select("idtb_curso, codigo, descripcion as label, creditos, idtb_ciclo");
 //        $this->db->from("tb_curso");
 //        $this->db->like("descripcion", $valor);
-        $this->db->select("id_curso, codigo, descripcion as label, creditos, id_ciclo");
+        $this->db->select("id, codigo, descripcion as label, creditos, id_ciclo");
         $this->db->from("curso");
         $this->db->like("descripcion", $valor);
         $resultados = $this->db->get();
@@ -39,7 +38,7 @@ class CA_Carga_model extends CI_Model {
 //        $this->db->select("idtb_dia, descripcion as label");
 //        $this->db->from("tb_dia");
 //        $this->db->like("descripcion", $valor);
-        $this->db->select("id_dia, descripcion as label");
+        $this->db->select("id, descripcion as label");
         $this->db->from("dia");
         $this->db->like("descripcion", $valor);
         $resultados = $this->db->get();
@@ -60,14 +59,22 @@ class CA_Carga_model extends CI_Model {
     
     
     public function getCargaTodosPorDocente(){
-        $this->db->select("car.*, sem.descripcion as semestre, CONCAT(usu.nombre, ' ', usu.apellido) as docente, sec.descripcion as seccion, tur.descripcion as turno, cur.descripcion as curso");
-        $this->db->from("tb_carga car");
-        $this->db->join("tb_semestre sem", "car.idtb_semestre = sem.idtb_semestre");
-        $this->db->join("tb_docente doc", "car.idtb_docente = doc.idtb_docente");
-        $this->db->join("tb_usuario usu", "doc.idtb_usuario = usu.idtb_usuario");
-        $this->db->join("tb_seccion sec", "car.idtb_seccion = sec.idtb_seccion");
-        $this->db->join("tb_turno tur", "car.idtb_turno = tur.idtb_turno");
-        $this->db->join("tb_curso cur", "car.idtb_curso = cur.idtb_curso");
+//        $this->db->select("car.*, sem.descripcion as semestre, CONCAT(usu.nombre, ' ', usu.apellido) as docente, sec.descripcion as seccion, tur.descripcion as turno, cur.descripcion as curso");
+//        $this->db->from("tb_carga car");
+//        $this->db->join("tb_semestre sem", "car.idtb_semestre = sem.idtb_semestre");
+//        $this->db->join("tb_docente doc", "car.idtb_docente = doc.idtb_docente");
+//        $this->db->join("tb_usuario usu", "doc.idtb_usuario = usu.idtb_usuario");
+//        $this->db->join("tb_seccion sec", "car.idtb_seccion = sec.idtb_seccion");
+//        $this->db->join("tb_turno tur", "car.idtb_turno = tur.idtb_turno");
+//        $this->db->join("tb_curso cur", "car.idtb_curso = cur.idtb_curso");
+        $this->db->select("car.id id_carga, sem.descripcion as semestre, sec.descripcion as seccion, tur.descripcion as turno, cur.descripcion as curso");
+        $this->db->from("carga car");
+        $this->db->join("semestre sem", "car.id_semestre = sem.id");
+        $this->db->join("docente doc", "car.id_docente = doc.id");
+        $this->db->join("seccion sec", "car.id_seccion = sec.id");
+        $this->db->join("turno tur", "car.id_turno = tur.id");
+        $this->db->join("curso cur", "car.id_curso = cur.id");
+        $this->db->where("doc.id", $this->session->userdata("id"));
         $resultados = $this->db->get();
         return $resultados->result();
         //$this->db->where("usu.idtb_usuario", $this->session->userdata("idtb_usuario"));

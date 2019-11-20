@@ -42,8 +42,8 @@
                             <div class="form-group col-md-6">
                                 <label for="tipodocentelista">Tipo de docente</label>
                                 <select class="form-control" id="tipodocentelista" name="tipodocentelista">
-                                    <?php foreach($tiposdocentes as $tiposdocente): ?>
-                                        <option value="<?php echo $tiposdocente->idtb_tipo_docente ?>" ><?php echo $tiposdocente->descripcion; ?></option>
+                                    <?php foreach($tipos_de_docente as $un_tipo_de_docente): ?>
+                                        <option value="<?php echo $un_tipo_de_docente->id_tipo_docente ?>" ><?php echo $un_tipo_de_docente->descripcion; ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>

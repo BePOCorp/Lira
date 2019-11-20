@@ -34,11 +34,11 @@
                                 <?php if (!empty($todaslasactividades)): ?>
                                     <?php foreach ($todaslasactividades as $unaactividad): ?>
                                         <tr>
-                                            <td><?php echo $unaactividad->idtb_actividad; ?></td>
+                                            <td><?php echo $unaactividad->id_actividad; ?></td>
                                             <td><?php echo $unaactividad->descripcion; ?></td>
                                             <td>
                                                 <div class="btn-group">
-                                                    <a href="<?php echo base_url(); ?>controller/actividades/edit/<?php echo $unaactividad->idtb_actividad;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
+                                                    <a href="<?php echo base_url(); ?>controller/actividades/edit/<?php echo $unaactividad->id_actividad;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
                                                 </div>
                                             </td>
                                         </tr>

@@ -9,11 +9,10 @@ class CA_Asignar_model extends CI_Model {
 //        $this->db->join("tb_docente doc", "asi.idtb_docente = doc.idtb_docente");
 //        $this->db->join("tb_usuario usu", "doc.idtb_usuario = usu.idtb_usuario");
 //        $this->db->join("tb_actividad act", "asi.idtb_actividad = act.idtb_actividad");
-        $this->db->select("asi.*, CONCAT(usu.nombre, ' ', usu.apellido) as docente, act.descripcion as actividad");
+        $this->db->select("asi.id id_asignacion, CONCAT(doc.nombres, ' ', doc.apellido_paterno) as docente, asi.horas, act.descripcion as actividad");
         $this->db->from("carga_no_lectiva asi");
-        $this->db->join("docente doc", "asi.id_docente = doc.id_docente");
-        $this->db->join("usuario usu", "doc.id_usuario = usu.id_usuario");
-        $this->db->join("actividad act", "asi.id_actividad = act.id_actividad");
+        $this->db->join("docente doc", "asi.id_docente = doc.id");
+        $this->db->join("actividad act", "asi.id_actividad = act.id");
         $resultados = $this->db->get();
         return $resultados->result();
     }
@@ -22,7 +21,7 @@ class CA_Asignar_model extends CI_Model {
 //        $this->db->select("idtb_curso, codigo, descripcion as label, creditos, idtb_ciclo");
 //        $this->db->from("tb_curso");
 //        $this->db->like("descripcion", $valor);
-        $this->db->select("id_curso, codigo, descripcion as label, creditos, id_ciclo");
+        $this->db->select("id, codigo, descripcion as label, creditos, id_ciclo");
         $this->db->from("curso");
         $this->db->like("descripcion", $valor);
         $resultados = $this->db->get();
@@ -33,7 +32,7 @@ class CA_Asignar_model extends CI_Model {
 //        $this->db->select("idtb_dia, descripcion as label");
 //        $this->db->from("tb_dia");
 //        $this->db->like("descripcion", $valor);
-        $this->db->select("id_dia, descripcion as label");
+        $this->db->select("id, descripcion as label");
         $this->db->from("dia");
         $this->db->like("descripcion", $valor);
         $resultados = $this->db->get();
@@ -49,5 +48,21 @@ class CA_Asignar_model extends CI_Model {
     public function save_detalle($data){
 //        $this->db->insert("tb_horario", $data);
         $this->db->insert("horario", $data);
+    }
+    
+    
+    public function getAsignacionTodosPorDocente(){
+//        $this->db->select("asi.*, CONCAT(usu.nombre, ' ', usu.apellido) as docente, act.descripcion as actividad");
+//        $this->db->from("tb_carga_no_lectiva asi");
+//        $this->db->join("tb_docente doc", "asi.idtb_docente = doc.idtb_docente");
+//        $this->db->join("tb_usuario usu", "doc.idtb_usuario = usu.idtb_usuario");
+//        $this->db->join("tb_actividad act", "asi.idtb_actividad = act.idtb_actividad");
+        $this->db->select("asi.id id_asignacion, asi.horas, act.descripcion as actividad");
+        $this->db->from("carga_no_lectiva asi");
+        $this->db->join("docente doc", "asi.id_docente = doc.id");
+        $this->db->join("actividad act", "asi.id_actividad = act.id");
+        $this->db->where("doc.id", $this->session->userdata("id"));
+        $resultados = $this->db->get();
+        return $resultados->result();
     }
 }

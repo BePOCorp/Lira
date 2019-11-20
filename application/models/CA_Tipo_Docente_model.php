@@ -4,20 +4,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class CA_Tipo_Docente_model extends CI_Model {
     
     public function getTipoDocenteTodos(){
-        $this->db;
-        $resultados = $this->db->get("tb_tipo_docente");
+//        $this->db;
+//        $resultados = $this->db->get("tb_tipo_docente");
+        $this->db->select("id id_tipo_docente, descripcion");
+        $resultados = $this->db->get("tipo_docente");
         return $resultados->result();
     }
     
     
     public function getCategoriasPorEstado($Estado){
         $this->db->where("Estado", $Estado);
-        $this->db;
-        $resultados = $this->db->get("tb_categoria");
+//        $this->db;
+//        $resultados = $this->db->get("tb_categoria");
+        $resultados = $this->db->get("categoria");
         return $resultados->result();   
     }
     public function save($data){
-        return $this->db->insert("tb_categoria",$data);
+//        return $this->db->insert("tb_categoria",$data);
+        return $this->db->insert("categoria",$data);
     }
     public function getPlaza($plaza){
         $this->db->where("id",$plaza);

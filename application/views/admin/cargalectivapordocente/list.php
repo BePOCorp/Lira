@@ -14,11 +14,13 @@
         <!-- Default box -->
         <div class="box box-solid">
             <div class="box-body">
-                <div class="row">
+                
+<!--                <div class="row">
                     <div class="col-md-12">
                         <a href="<?php echo base_url(); ?>controller/cargas/add" class="btn btn-primary btn-flat"><span class="fa fa-plus"></span> Agregar Carga</a>
                     </div>
-                </div>
+                </div>-->
+                
                 <hr>
                 <div class="row">
                     <div class="col-md-12" >
@@ -34,10 +36,10 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php if (!empty(todaslascargaspordocente)): ?>
-                                    <?php foreach (todaslascargaspordocente as $carga): ?>
+                                <?php if (!empty($todaslascargaspordocente)): ?>
+                                    <?php foreach ($todaslascargaspordocente as $carga): ?>
                                         <tr>
-                                            <td><?php echo $carga->idtb_carga; ?></td>
+                                            <td><?php echo $carga->id_carga; ?></td>
                                             <td><?php echo $carga->semestre; ?></td>
                                             <td><?php echo $carga->curso; ?></td>
                                             <td><?php echo $carga->seccion; ?></td>
@@ -52,7 +54,7 @@
 <!--                                                    <button type="button" class="btn btn-info btn-view-carga" data-toggle="modal" data-target="#modal-default" value="<?php echo $carga->idtb_carga;?>">
                                                         <span class="fa fa-search"></span>
                                                     </button>-->
-                                                    <a href="<?php echo base_url(); ?>controller/cargas/edit/<?php echo $carga->idtb_carga;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
+                                                    <a href="<?php echo base_url(); ?>controller/cargas/edit/<?php echo $carga->id_carga;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
                                                     
 <!--                                                    <a href="#" class="btn btn-danger"><span class="fa fa-remove"></span></a>-->
                                                     

@@ -5,7 +5,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Asignar Carga no Lectiva
+            Carga no lectiva
             <small>Listado</small>
         </h1>
     </section>
@@ -36,7 +36,7 @@
                                 <?php if (!empty($todaslasasignaciones)): ?>
                                     <?php foreach ($todaslasasignaciones as $una_asignacion): ?>
                                         <tr>
-                                            <td><?php echo $una_asignacion->idtb_carga_no_lectiva; ?></td>
+                                            <td><?php echo $una_asignacion->id_asignacion; ?></td>
                                             <td><?php echo $una_asignacion->docente; ?></td>
                                             <td><?php echo $una_asignacion->actividad; ?></td>
                                             <td><?php echo $una_asignacion->horas; ?></td>
@@ -51,7 +51,7 @@
                                                         <span class="fa fa-search"></span>
                                                     </button>
                                                     -->
-                                                    <a href="<?php echo base_url(); ?>controller/asignar/edit/<?php echo $una_asignacion->idtb_carga_no_lectiva; ?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
+                                                    <a href="<?php echo base_url(); ?>controller/asignar/edit/<?php echo $una_asignacion->id_asignacion; ?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
                                                     
 <!--                                                    <a href="#" class="btn btn-danger"><span class="fa fa-remove"></span></a>-->
                                                     

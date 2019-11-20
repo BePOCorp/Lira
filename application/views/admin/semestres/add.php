@@ -31,7 +31,7 @@
                                 <label for="tipolista">Tipo de semestre</label>
                                 <select class="form-control" id="tipolista" name="tipolista">
                                     <?php foreach($todoslostipos as $untipo): ?>
-                                        <option value="<?php echo $untipo->idtb_tipo ?>" ><?php echo $untipo->descripcion; ?></option>
+                                        <option value="<?php echo $untipo->id_tipo ?>" ><?php echo $untipo->descripcion; ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>

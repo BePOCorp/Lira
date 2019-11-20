@@ -26,6 +26,7 @@ class Plantrabajo extends CI_Controller {
     public function add() {
         $data = array(           
             'todaslasactividades' => $this->CA_Plantrabajo_model->getActividadPorDocente(),
+//            'todaslasactividades' => $this->CA_Actividad_model->getActividadTodos(),
         );
         $this->load->view('layouts/header');
         $this->load->view('layouts/aside');
@@ -50,9 +51,13 @@ class Plantrabajo extends CI_Controller {
     protected function registrar_plantrabajo( $descripcion, $carga_no_lectiva, $numero_de_semana) {
         for($i = 0; $i < count($descripcion); $i++){
             $data = array(
-                'idtb_carga_no_lectiva' => $carga_no_lectiva,
+//                'idtb_carga_no_lectiva' => $carga_no_lectiva,
+//                'descripcion' => $descripcion[$i],
+//                'idtb_numero_semana' => $numero_de_semana[$i],
+//                'cumplimiento' => '1',
+                'id_carga_no_lectiva' => $carga_no_lectiva,
                 'descripcion' => $descripcion[$i],
-                'idtb_numero_semana' => $numero_de_semana[$i],
+                'id_numero_semana' => $numero_de_semana[$i],
                 'cumplimiento' => '1',
             );
             $this->CA_Plantrabajo_model->save($data);

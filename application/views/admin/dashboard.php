@@ -6,8 +6,8 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                Hola
-                <small>Editar</small>
+                Inicio
+                <!--<small>Editar</small>-->
                 </h1>
             </section>
             <!-- Main content -->
@@ -15,7 +15,7 @@
                 <!-- Default box -->
                 <div class="box box-solid">
                     <div class="box-body">
-                    Esta vista es la del dashboard
+                    Esta vista es la de Inicio
                     </div>
                     <!-- /.box-body -->
                 </div>

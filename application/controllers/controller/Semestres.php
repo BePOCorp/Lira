@@ -34,7 +34,8 @@ class Semestres extends CI_Controller {
         $tipolista = $this->input->post("tipolista");
         $data_semestre = array(
             'descripcion' => $descripcion,
-            'idtb_tipo' => $tipolista
+//            'idtb_tipo' => $tipolista
+            'id_tipo' => $tipolista
         );
         if ($this->CA_Semestre_model->save($data_semestre)) {
             redirect(base_url() . "controller/semestres");
@@ -59,7 +60,8 @@ class Semestres extends CI_Controller {
         $tipolista = $this->input->post("tipolista");
         $data_semestre = array(
             'descripcion' => $descripcion,
-            'idtb_tipo' => $tipolista,
+//            'idtb_tipo' => $tipolista,
+            'id_tipo' => $tipolista,
         );
         if ($this->CA_Semestre_model->update($semestre, $data_semestre)) {
                 redirect(base_url() . "controller/semestres");

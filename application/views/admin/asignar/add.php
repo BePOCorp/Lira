@@ -97,10 +97,7 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Codigo</th>
-                            <th>Documento</th>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
+                            <th>Datos Completos</th>
                             <th>Opcion</th>
                         </tr>
                     </thead>
@@ -108,17 +105,9 @@
                         <?php if (!empty($todoslosdocentes)): ?>
                             <?php foreach ($todoslosdocentes as $docente): ?>
                                 <tr>
-                                    <td><?php echo $docente->idtb_docente; ?></td>
-                                    <td><?php echo $docente->codigo; ?></td>
-                                    <td><?php echo $docente->documento; ?></td>
-                                    <td><?php echo $docente->nombre; ?></td>
-                                    <td><?php echo $docente->apellido; ?></td>
-                                    <!--
-                                    <td><?php echo $docente->apellido; ?></td>
-                                    <td><?php echo $docente->tipousuario; ?></td>
-                                    <td><?php echo $docente->tipodocente; ?></td>
-                                    -->
-                                    <?php $datadocente = $docente->idtb_docente . "*" . $docente->codigo . "*" . $docente->documento . "*" . $docente->nombre . "*" . $docente->apellido; ?>
+                                    <td><?php echo $docente->id_docente; ?></td>
+                                    <td><?php echo $docente->docente; ?></td>
+                                    <?php $datadocente = $docente->id_docente . "*" . $docente->docente; ?>
                                     <td>
                                         <button type="button" class="btn btn-success btn-check btn-check-docente" value="<?php echo $datadocente; ?>" ><span class="fa fa-check"></span></button>
                                         
@@ -166,9 +155,9 @@
                         <?php if (!empty($todaslasactividades)): ?>
                             <?php foreach ($todaslasactividades as $actividad): ?>
                                 <tr>
-                                    <td><?php echo $actividad->idtb_actividad; ?></td>                                   
+                                    <td><?php echo $actividad->id_actividad; ?></td>                                   
                                     <td><?php echo $actividad->descripcion; ?></td>                                                                                                                                            
-                                    <?php $dataactividad = $actividad->idtb_actividad . "*" . $actividad->descripcion; ?>
+                                    <?php $dataactividad = $actividad->id_actividad . "*" . $actividad->descripcion; ?>
                                     <td>
                                         <button type="button" class="btn btn-success btn-check btn-check-actividad" value="<?php echo $dataactividad; ?>" ><span class="fa fa-check"></span></button>
                                         

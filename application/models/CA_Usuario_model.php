@@ -28,4 +28,18 @@ class CA_Usuario_model extends CI_Model {
         $this->db->where("id",$id);
         return $this->db->update("usuario",$data);
     }
+    
+    
+    public function loginadministrativo($username, $password){
+        $this->db->select("id, nombres, apellido_paterno, apellido_materno, usuario, clave, id_tipo_docente");
+        $this->db->where("usuario",$username);
+        $this->db->where("clave",$password);
+//        $resultados = $this->db->get("tb_usuario");
+        $resultados = $this->db->get("administrativo");
+        if($resultados->num_rows() > 0){
+            return $resultados->row();
+        }else{
+            return FALSE;
+        }
+    }
 }

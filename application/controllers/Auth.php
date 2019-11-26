@@ -32,7 +32,8 @@ class Auth extends CI_Controller {
 //                'login' => TRUE,
                 'id' => $res->id,
                 'nombres' => $res->nombres,
-//                'id_tipo_usuario' => $res->id_tipo_usuario,
+                //'tipo_de_usuario' => "docente",
+                'tipo_de_usuario' => "administrativo",
                 'login' => TRUE,
             );
             $this->session->set_userdata($data);
@@ -45,4 +46,28 @@ class Auth extends CI_Controller {
         redirect(base_url());
     }
 
+    
+    public function loginadministrativo() {
+        $username = $this->input->post("username");
+        $password = $this->input->post("password");
+        $res = $this->CA_Usuario_model->loginadministrativo($username, $password);
+        if (!$res) {
+            $this->session->set_flashdata("Error", "El usuario y/o contraseña son incorrectos");
+            redirect(base_url());
+        } else {
+            $data = array(
+                //'id' => $res->id,
+//                'idtb_usuario' => $res->idtb_usuario,
+//                'nombre' => $res->nombre,
+//                'idtb_tipo_usuario' => $res->idtb_tipo_usuario,
+//                'login' => TRUE,
+                'id' => $res->id,
+                'nombres' => $res->nombres,
+                'tipo_de_usuario' => "administrativo",
+                'login' => TRUE,
+            );
+            $this->session->set_userdata($data);
+            redirect(base_url() . "dashboard");
+        }
+    }
 }

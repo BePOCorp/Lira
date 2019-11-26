@@ -19,14 +19,15 @@ class Seguimiento extends CI_Controller {
         $data = array(
             'todoslosreportes' => $this->CA_Seguimiento_model->getReporteporPlan(),
         );
-        if ($this->session->userdata("1")) {
+        //if ($this->session->userdata("1")) {
+        if ($this->session->userdata("tipo_de_usuario") == "docente" ) {
             $this->load->view('layouts/header');
             $this->load->view('layouts/aside');
             $this->load->view('admin/seguimiento/list', $data);
             $this->load->view('layouts/footer');
         } else {
             $this->load->view('layouts/header');
-            $this->load->view('layouts/aside_docente');
+            $this->load->view('layouts/asideadministrativo');
             $this->load->view('admin/seguimiento/list', $data);
             $this->load->view('layouts/footer');
         }

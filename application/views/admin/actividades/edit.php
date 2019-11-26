@@ -26,7 +26,7 @@
                             <!--
                             <div class="form-group col-md-6">
                                 <label for="docente">Id docente</label> -->
-                                <input type="hidden" class="form-control" id="actividad" name="actividad" value="<?php echo $unaactividad->idtb_actividad?>" readonly >
+                                <input type="hidden" class="form-control" id="actividad" name="actividad" value="<?php echo $unaactividad->id_actividad?>" readonly >
                             <!--
                             </div>
                             -->

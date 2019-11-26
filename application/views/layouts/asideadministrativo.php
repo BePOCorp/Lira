@@ -20,8 +20,10 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="<?php echo base_url(); ?>controller/cargas"><i class="fa fa-circle-o"></i> Cargas</a></li>
-                    <li><a href="<?php echo base_url(); ?>controller/cargalectivapordocente"><i class="fa fa-circle-o"></i> Mi carga lectiva</a></li>
+                    <li><a href="<?php echo base_url(); ?>controller/docentes"><i class="fa fa-circle-o"></i> Docentes</a></li>
+                    <li><a href="<?php echo base_url(); ?>controller/cursos"><i class="fa fa-circle-o"></i> Cursos</a></li>
+                    <li><a href="<?php echo base_url(); ?>controller/semestres"><i class="fa fa-circle-o"></i> Semestres</a></li>
+                    <li><a href="<?php echo base_url(); ?>controller/cargas"><i class="fa fa-circle-o"></i> Carga lectiva</a></li>
                 </ul>
             </li>
             <li class="treeview">
@@ -32,7 +34,7 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-
+                    <li><a href="<?php echo base_url(); ?>controller/actividades"><i class="fa fa-circle-o"></i> Actividades</a></li>
                     <li><a href="<?php echo base_url(); ?>controller/asignar"><i class="fa fa-circle-o"></i> Asignar Carga no Lectiva</a></li>
                     <li><a href="<?php echo base_url(); ?>controller/plantrabajo"><i class="fa fa-circle-o"></i> Plan de Trabajo</a></li>
                     <li><a href="<?php echo base_url(); ?>controller/seguimiento"><i class="fa fa-circle-o"></i> Seguimiento</a></li>

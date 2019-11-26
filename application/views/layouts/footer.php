@@ -248,12 +248,12 @@
 
 
 
-
+    //Carga Academica - Agregar - Buscar Docente
     $(document).on("click", ".btn-check-docente", function () {
         docente = $(this).val();
         infodocente = docente.split("*");
         $("#id_un_docente").val(infodocente[0]);
-        $("#nombre_un_docente").val(infodocente[3] + " " + infodocente[4]);
+        $("#nombre_un_docente").val(infodocente[1]);
         $("#modal-default").modal("hide");
     });
     $(document).on("click", ".btn-check-curso", function () {
